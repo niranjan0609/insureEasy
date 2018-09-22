@@ -45,7 +45,6 @@ public class SendWelcomeEmailPage {
 	public void clickSearchbtn() {
 		wait.until(ExpectedConditions.presenceOfElementLocated(searchBtn));
 		driver.findElement(searchBtn).click();
-		wait.until(ExpectedConditions.presenceOfElementLocated(sendmailLink));
 	}
 	
 	public void sendEmail() {
