@@ -1,0 +1,6 @@
+com\gmc\pageobjects\admin\AdminLoginPage.class
+com\gmc\tests\admin\AdminLoginTest.class
+com\gmc\utils\generalutil.class
+com\gmc\pageobjects\admin\SendWelcomeEmailPage.class
+com\gmc\pageobjects\admin\AdminHomePage.class
+com\gmc\base\TestBase.class
