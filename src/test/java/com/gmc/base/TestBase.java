@@ -6,6 +6,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Parameters;
+import org.testng.annotations.Optional;
 
 public class TestBase{
 
@@ -51,8 +52,7 @@ public class TestBase{
 
 	@Parameters({ "browserType", "appURL" })
 	@BeforeSuite
-	public void initializeTestBaseSetup(String browserType, String appURL) {
-		try {
+	public void initializeTestBaseSetup(@Optional("chrome") String browserType, @Optional("https://ienroll.indiainsure.com/") String appURL) {		try {
 			setDriver(browserType, appURL);
 
 		} catch (Exception e) {
