@@ -22,6 +22,8 @@ public class SendWelcomeEmailTest extends TestBase{
 		@BeforeClass
 		public void setUp() {
 			driver=getDriver();
+			String URL = driver.getCurrentUrl() + "admin";
+			driver.get(URL);
 		}
 
 	String xlFilePath = "F:/Drivers/EmpData.xlsx";
