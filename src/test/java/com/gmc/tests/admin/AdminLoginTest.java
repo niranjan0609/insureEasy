@@ -18,6 +18,8 @@ public class AdminLoginTest extends TestBase{
 		@BeforeClass
 		public void setUp() {
 			driver=getDriver();
+			String URL = driver.getCurrentUrl() + "admin";
+			driver.get(URL);
 		}
 	
 	@Test
