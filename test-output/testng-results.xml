@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="1" ignored="0" total="2" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="4005" started-at="2018-09-26T05:28:29Z" finished-at="2018-09-26T05:28:33Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="4005" started-at="2018-09-26T05:28:29Z" finished-at="2018-09-26T05:28:33Z">
+      <class name="com.gmc.tests.admin.AdminExcelImportTest">
+        <test-method status="PASS" signature="initializeTestBaseSetup(java.lang.String, java.lang.String)[pri:0, instance:com.gmc.tests.admin.AdminExcelImportTest@12fc6eb]" name="initializeTestBaseSetup" is-config="true" duration-ms="8196" started-at="2018-09-26T05:28:21Z" finished-at="2018-09-26T05:28:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[http://dev.isbsindia.in/mmenroll/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeTestBaseSetup -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.gmc.tests.admin.AdminExcelImportTest@12fc6eb]" name="setUp" is-config="true" duration-ms="2199" started-at="2018-09-26T05:28:29Z" finished-at="2018-09-26T05:28:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="ClickExcelImport()[pri:0, instance:com.gmc.tests.admin.AdminExcelImportTest@12fc6eb]" name="ClickExcelImport" duration-ms="530" started-at="2018-09-26T05:28:32Z" finished-at="2018-09-26T05:28:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ClickExcelImport -->
+        <test-method status="FAIL" signature="SelectCompanyDropdown(java.lang.String)[pri:0, instance:com.gmc.tests.admin.AdminExcelImportTest@12fc6eb]" name="SelectCompanyDropdown" duration-ms="0" started-at="2018-09-26T05:28:32Z" finished-at="2018-09-26T05:28:32Z">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Cannot inject @Test annotated Method [SelectCompanyDropdown] with [class java.lang.String].
+For more information on native dependency injection please refer to http://testng.org/doc/documentation-main.html#native-dependency-injection]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Cannot inject @Test annotated Method [SelectCompanyDropdown] with [class java.lang.String].
+For more information on native dependency injection please refer to http://testng.org/doc/documentation-main.html#native-dependency-injection
+at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:407)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:356)
+at org.testng.internal.Parameters.createParameters(Parameters.java:635)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:769)
+at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:49)
+at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:37)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:924)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SelectCompanyDropdown -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.gmc.tests.admin.AdminExcelImportTest@12fc6eb]" name="tearDown" is-config="true" duration-ms="965" started-at="2018-09-26T05:28:32Z" finished-at="2018-09-26T05:28:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.gmc.tests.admin.AdminExcelImportTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

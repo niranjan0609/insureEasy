@@ -12,8 +12,9 @@ public class AdminHomePage {
 	private WebDriverWait wait;
 	
 	private By welcomeText = By.cssSelector("#column-left h5");
-	private By passText = By.id("txtPassword");
+	//private By passText = By.id("txtPassword");
 	private By 	resendWelcomeEmailLink = By.id("BrokerControl_lnkIndWelcomeMail");
+	private By excelImportLink = By.id("BrokerControl_lnkExcelImport");
 	
 	public AdminHomePage(WebDriver driver) {
 		this.driver = driver;
@@ -34,5 +35,10 @@ public class AdminHomePage {
 		driver.findElement(resendWelcomeEmailLink).click();
 		return new SendWelcomeEmailPage(driver);
 	}
-
+	public AdminExcelImportPage clickExcelImport() {
+		wait.until(ExpectedConditions.presenceOfElementLocated(excelImportLink));
+		driver.findElement(excelImportLink).click();
+		return new AdminExcelImportPage(driver);
+	}
+	
 }

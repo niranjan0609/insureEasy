@@ -21,9 +21,9 @@ public class SendWelcomeEmailPage {
 	private By empIdText = By.id("ContentPlaceHolder1_txtSearchEmpId");
 	private By emailID = By.id("ContentPlaceHolder1_txtEmail");
 	private By searchBtn = By.id("ContentPlaceHolder1_btnSearch");
-	private By sendmailLink = By.cssSelector("tbody td a:contains('send mail')");
-	private By successMsg = By.cssSelector("");
-	private By failureMsg = By.cssSelector("");
+	private By sendmailLink = By.xpath("/html/body/form[@id='form1']/div[@id='wrapper']/div[@id='container']/div[@id='content']/div[@id='content']/div[@class='boxFull']/div[@class='datagrid']/table[2]/tbody[2]/tr/td[5]/a");
+	private By successMsg = By.id("ContentPlaceHolder1_lblMailStatus");
+	private By failureMsg = By.id("ContentPlaceHolder1_lblMailStatus");
 	
 	public String welcomeEmailPageText() {
 		wait.until(ExpectedConditions.presenceOfElementLocated(welcomeText));
@@ -40,7 +40,7 @@ public class SendWelcomeEmailPage {
 		wait.until(ExpectedConditions.presenceOfElementLocated(emailID));
 		WebElement empId = driver.findElement(empIdText);
 		empId.sendKeys(strEmailID);
-	}
+	}  
 	
 	public void clickSearchbtn() {
 		wait.until(ExpectedConditions.presenceOfElementLocated(searchBtn));

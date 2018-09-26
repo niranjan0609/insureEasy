@@ -2,6 +2,7 @@ package com.gmc.tests.admin;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -17,16 +18,23 @@ public class SendWelcomeEmailTest extends TestBase{
 	private WebDriver driver;
 	private String pageHeadertext = "Welcome Mail";
 	private String errorMessage = "Mail not sent";
-	private String SuccessMessage = "Mail sent successfully!";
+	private String SuccessMessage = "Mail sent successfully.";
+	public AdminLoginPage loginPage;
+	public AdminHomePage homePage;
 
 		@BeforeClass
 		public void setUp() {
 			driver=getDriver();
 			String URL = driver.getCurrentUrl() + "admin";
 			driver.get(URL);
+			loginPage = new AdminLoginPage(driver);
+			loginPage.enterLoginName("citibr");
+			loginPage.enterPassword("qaz456");
+			homePage = loginPage.NavigateToHomePage();
+			homePage.verifySuccessfullLogin("BR LOGIN");
 		}
 
-	String xlFilePath = "F:/Drivers/EmpData.xlsx";
+	String xlFilePath = "D://EmpData.xlsx";
 	ExcelReader sheet = null;
 
 	public Object[][] testData(String xlFilePath, String sheetName) throws Exception {
@@ -50,14 +58,10 @@ public class SendWelcomeEmailTest extends TestBase{
         Object[][] data = testData(xlFilePath, "Sheet1");
         return data;
     }
+
 	
 	@Test(dataProvider = "userData")
 	public void sendEmail(String employeeId) {
-		AdminLoginPage loginPage = new AdminLoginPage(driver);
-		loginPage.enterLoginName("sahana");
-		loginPage.enterPassword("sahana123");
-		AdminHomePage homePage = loginPage.NavigateToHomePage();
-		homePage.verifySuccessfullLogin("SAHANA");
 		SendWelcomeEmailPage emailPage = homePage.clickResendWelcomeEmail();
 		String pageText = emailPage.welcomeEmailPageText();
 		Assert.assertTrue(pageHeadertext.equals(pageText), "Welcome Email Page is not correct");
@@ -67,5 +71,12 @@ public class SendWelcomeEmailTest extends TestBase{
 		String actualMsg = emailPage.getMessage();
 		Assert.assertTrue(actualMsg.equals(SuccessMessage), "Failure message");
 	
+	}
+	
+	@AfterClass
+	public void tearDown() {
+		if(driver!=null) {
+			driver.quit();
+		}
 	}
 }

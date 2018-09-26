@@ -2,11 +2,11 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="Test Suite 2" verbose="1">
 <parameter name="browserType" value="chrome" />
-<parameter name="appURL" value="https://ienroll.indiainsure.com/admin" />
+<parameter name="appURL" value="http://dev.isbsindia.in/mmenroll/" />
 
 	<test name="Admin Tests">
 		<classes>
-			<class name="com.gmc.tests.admin.SendWelcomeEmailTest" />
+			<class name="com.gmc.tests.admin.AdminLoginTest" />
 		</classes>
 	</test>
 </suite>

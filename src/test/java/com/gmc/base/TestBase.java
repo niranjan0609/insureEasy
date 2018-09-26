@@ -11,7 +11,7 @@ import org.testng.annotations.Optional;
 public class TestBase{
 
 	private WebDriver driver;
-	static String driverPath = "F:/Drivers/";
+	static String driverPath = "D:\\";
 
 	public WebDriver getDriver() {
 		return driver;
@@ -52,7 +52,7 @@ public class TestBase{
 
 	@Parameters({ "browserType", "appURL" })
 	@BeforeSuite
-	public void initializeTestBaseSetup(@Optional("chrome") String browserType, @Optional("https://ienroll.indiainsure.com/") String appURL) {		try {
+	public void initializeTestBaseSetup(@Optional("chrome") String browserType, @Optional("http://dev.isbsindia.in/mmenroll/") String appURL) {		try {
 			setDriver(browserType, appURL);
 
 		} catch (Exception e) {

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Test Suite 2]">
+  <parameter name="appURL" value="http://dev.isbsindia.in/mmenroll/"/>
+  <parameter name="browserType" value="chrome"/>
+  <test thread-count="5" name="Admin Tests(failed)">
+    <classes>
+      <class name="com.gmc.tests.admin.AdminLoginTest">
+        <methods>
+          <include name="initializeTestBaseSetup"/>
+          <include name="validloginTest"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.gmc.tests.admin.AdminLoginTest -->
+    </classes>
+  </test> <!-- Admin Tests(failed) -->
+</suite> <!-- Failed suite [Test Suite 2] -->

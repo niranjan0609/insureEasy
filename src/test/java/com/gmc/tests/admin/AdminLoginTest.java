@@ -23,18 +23,20 @@ public class AdminLoginTest extends TestBase{
 		}
 	
 	@Test
-	public void validloginTest(){
+	public void validloginTest() throws InterruptedException{
 		AdminLoginPage loginPage = new AdminLoginPage(driver);
-		loginPage.enterLoginName("sahana");
-		loginPage.enterPassword("sahana123");
+		loginPage.enterLoginName("citibr");
+		loginPage.enterPassword("qaz456");
 		AdminHomePage homePage = loginPage.NavigateToHomePage();
-		homePage.verifySuccessfullLogin("SAHANA");
+		homePage.verifySuccessfullLogin("BR LOGIN");
+		Thread.sleep(1000);
+		
 	}
 	
 	@Test void invalidUsername() {
 		AdminLoginPage loginPage = new AdminLoginPage(driver);
-		loginPage.enterLoginName("1234567890998877766612");
-		loginPage.enterPassword("sahana123");
+		loginPage.enterLoginName("citibr");
+		loginPage.enterPassword("qa456");
 		loginPage.clickLoginBtn();
 		String error = loginPage.getErrorMessage();
 		Assert.assertEquals(error, errorMessage, "Error message is not correct");
