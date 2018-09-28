@@ -15,6 +15,10 @@ public class AdminHomePage {
 	//private By passText = By.id("txtPassword");
 	private By 	resendWelcomeEmailLink = By.id("BrokerControl_lnkIndWelcomeMail");
 	private By excelImportLink = By.id("BrokerControl_lnkExcelImport");
+	private By searchEmpLink = By.id("BrokerControl_lnkGetCard");
+	private By searchToResetLink = By.id("BrokerControl_lnkEditEmployee");
+	private By resendConfirmationEmailLink = By.id("BrokerControl_lnkBRCnfMail");
+	private By bulkEmailLink = By.id("BrokerControl_lnkMails");
 	
 	public AdminHomePage(WebDriver driver) {
 		this.driver = driver;
@@ -40,5 +44,32 @@ public class AdminHomePage {
 		driver.findElement(excelImportLink).click();
 		return new AdminExcelImportPage(driver);
 	}
+	public AdminSearchEmployeePage clickSearchEmployee() {
+		wait.until(ExpectedConditions.presenceOfElementLocated(searchEmpLink));
+		driver.findElement(searchEmpLink).click();
+		return new AdminSearchEmployeePage(driver);
+	}
+	public AdminResetEmployeePage clickToResetEmployee() {
+		wait.until(ExpectedConditions.presenceOfElementLocated(searchToResetLink));
+		driver.findElement(searchToResetLink).click();
+		return new AdminResetEmployeePage(driver);
+	}
 	
+	public AdminUpdateDependentsPage clickToUpdateDependents() {
+		wait.until(ExpectedConditions.presenceOfElementLocated(searchToResetLink));
+		driver.findElement(searchToResetLink).click();
+		return new AdminUpdateDependentsPage(driver);
+	}
+	
+	public SendConfirmationEmailPage clickResendConfirmationemail() {
+		wait.until(ExpectedConditions.presenceOfElementLocated(resendConfirmationEmailLink));
+		driver.findElement(resendConfirmationEmailLink).click();
+		return new SendConfirmationEmailPage(driver);
+}
+	
+	public AdminBulkEmailsPage clickBulkEmail() {
+		wait.until(ExpectedConditions.presenceOfElementLocated(bulkEmailLink));
+		driver.findElement(bulkEmailLink).click();
+		return new AdminBulkEmailsPage(driver);
+	}
 }

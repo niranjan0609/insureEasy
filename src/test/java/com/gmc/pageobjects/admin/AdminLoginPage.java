@@ -19,7 +19,7 @@ public class AdminLoginPage {
 	private By emailText = By.id("txtUserName");
 	private By passwordText = By.id("txtPassword");
 	private By loginBtn = By.id("btnLogin");
-	private By logoImg = By.cssSelector(".logo");
+	//private By logoImg = By.cssSelector(".logo");
 	private By errorMsg = By.id("lblMessage");
 	
 	public void enterLoginName(String username) {

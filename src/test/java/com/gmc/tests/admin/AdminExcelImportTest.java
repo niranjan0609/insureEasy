@@ -1,6 +1,8 @@
 package com.gmc.tests.admin;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -34,19 +36,18 @@ public class AdminExcelImportTest extends TestBase {
 String FilePath = "D://ExcelImport.xlsx";
 
      @Test
- 	 public void clickExcelImport() {
-    	 AdminExcelImportPage importPage = homePage.clickExcelImport();
-    	 //String exPageText= importPage.getExcelImportPageText();
-    	 //Assert.assertTrue(excelPageHeadertext.equals(exPageText), "Excel Import Page is not correct");
+ 	 public void excelImport() throws InterruptedException {
+    	 excelPage = homePage.clickExcelImport();
+    	 excelPage.selectCompany("CITIBANK N A");
+       	 excelPage.uploadExcelFile();
+    	 excelPage.enterEnrollFromDate("09-26-2018");
+    	 excelPage.enterEnrollToDate("10-10-2018");
+         excelPage.clickuploadbtn();
+    	 Thread.sleep(3000);
+    	 
     	}
      
-     @Test
-   	 public void selectCompanyDropdown(String CompanyName) {
-      	 
-		excelPage.selectCompany("CITIBANK N A");
-      
-        }
-
+  
 @AfterClass
 public void tearDown() {
 	if(driver!=null) {
