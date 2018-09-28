@@ -19,6 +19,8 @@ public class AdminHomePage {
 	private By searchToResetLink = By.id("BrokerControl_lnkEditEmployee");
 	private By resendConfirmationEmailLink = By.id("BrokerControl_lnkBRCnfMail");
 	private By bulkEmailLink = By.id("BrokerControl_lnkMails");
+	private By excelDepLink = By.id("BrokerControl_lnkExcelDependents");
+	private By uploadCertificateLink = By.id("BrokerControl_lnkUpload");
 	
 	public AdminHomePage(WebDriver driver) {
 		this.driver = driver;
@@ -72,4 +74,25 @@ public class AdminHomePage {
 		driver.findElement(bulkEmailLink).click();
 		return new AdminBulkEmailsPage(driver);
 	}
+	
+
+	public AdminExcelImportDepPage clickExcelDep() {
+		wait.until(ExpectedConditions.presenceOfElementLocated(excelDepLink));
+		driver.findElement(excelDepLink).click();
+		return new AdminExcelImportDepPage(driver);
+	}
+
+	public AdminUploadCertificatePage clickUploadCertificate() {
+		wait.until(ExpectedConditions.presenceOfElementLocated(uploadCertificateLink));
+		driver.findElement(uploadCertificateLink).click();
+		return new AdminUploadCertificatePage(driver);
+	}
+
+	
+	/*public AdminUploadCertificatePage clickUploadCertificate() {
+		wait.until(ExpectedConditions.presenceOfElementLocated(uploadCertificateLink));
+		driver.findElement(uploadCertificateLink).click();
+		return new AdminUploadCertificatePage(driver);
+	}*/
+	
 }
