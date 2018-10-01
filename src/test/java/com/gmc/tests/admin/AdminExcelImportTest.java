@@ -21,6 +21,10 @@ public class AdminExcelImportTest extends TestBase {
 	public AdminHomePage homePage;
 	public AdminExcelImportPage excelPage;
 	
+	String FilePath = "D://ExcelImport.xlsx";
+	String fileDownloadPath = "";
+	String downloadedFilename = "";
+	
 	@BeforeClass
 	public void setUp() {
 		driver=getDriver();
@@ -30,10 +34,8 @@ public class AdminExcelImportTest extends TestBase {
 		loginPage.enterLoginName("citibr");
 		loginPage.enterPassword("qaz456");
 		homePage = loginPage.NavigateToHomePage();
-		homePage.verifySuccessfullLogin("BR LOGIN");
 	}
 
-String FilePath = "D://ExcelImport.xlsx";
 
      @Test
  	 public void excelImport() throws InterruptedException {
@@ -43,9 +45,26 @@ String FilePath = "D://ExcelImport.xlsx";
     	 excelPage.enterEnrollFromDate("09-26-2018");
     	 excelPage.enterEnrollToDate("10-10-2018");
          excelPage.clickuploadbtn();
+         String message  = excelPage.getLotMessage();
+         
+         if(!message.equals("0")) {
+        	 Assert.assertTrue(true, "Excel imported successfully");
+         } else  {
+        	 Assert.assertTrue(false, "Excel import Failed");
+         }
+         
+         //excelPage.clickNextbtn();
+         Assert.assertTrue(false, "Excel import Failed");
     	 Thread.sleep(3000);
     	 
     	}
+     
+     @Test
+ 	public void VerifyExcelFileDownload() throws InterruptedException  {
+    	 excelPage = homePage.clickExcelImport();
+    	 excelPage.clickDownloadExcel();
+ 	    Assert.assertTrue(excelPage.verifyIfFileDownloaded(fileDownloadPath, downloadedFilename), "Failed downloaded failed");
+ 	}
      
   
 @AfterClass

@@ -27,13 +27,9 @@ public class AdminHomePage {
 		wait = new WebDriverWait(driver, 5);
 	}
 	
-	public void verifySuccessfullLogin(String username) {
+	public String getHomePageText() {
 		wait.until(ExpectedConditions.presenceOfElementLocated(welcomeText));
-		String getWelcomeText = driver.findElement(welcomeText).getText();
-		System.out.println("Welcome text - " +getWelcomeText);
-		String expectedText = "Welcome "+username;
-		System.out.println("Expected Welcome text - " +expectedText);
-		Assert.assertEquals(getWelcomeText, expectedText, "Welcome username not correct");
+		return driver.findElement(welcomeText).getText();
 	}
 	
 	public SendWelcomeEmailPage clickResendWelcomeEmail() {
@@ -88,11 +84,5 @@ public class AdminHomePage {
 		return new AdminUploadCertificatePage(driver);
 	}
 
-	
-	/*public AdminUploadCertificatePage clickUploadCertificate() {
-		wait.until(ExpectedConditions.presenceOfElementLocated(uploadCertificateLink));
-		driver.findElement(uploadCertificateLink).click();
-		return new AdminUploadCertificatePage(driver);
-	}*/
 	
 }

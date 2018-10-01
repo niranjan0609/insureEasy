@@ -5,13 +5,14 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Optional;
 
 public class TestBase{
 
 	private WebDriver driver;
-	static String driverPath = "D:\\";
+	static String driverPath = "D:/drivers/";
 
 	public WebDriver getDriver() {
 		return driver;
@@ -24,6 +25,9 @@ public class TestBase{
 			break;
 		case "firefox":
 			driver = initFirefoxDriver(appURL);
+			break;
+		case "ie":
+			driver = initInternetExplorer(appURL);
 			break;
 		default:
 			System.out.println("browser : " + browserType
@@ -43,7 +47,19 @@ public class TestBase{
 	}
 
 	private static WebDriver initFirefoxDriver(String appURL) {
-		System.out.println("Launching Firefox browser..");
+		System.out.println("Launching firefox browser..");
+		System.setProperty("webdriver.gecko.driver", driverPath
+				+ "geckodriver.exe");
+		WebDriver driver = new FirefoxDriver();
+		driver.manage().window().maximize();
+		driver.navigate().to(appURL);
+		return driver;
+	}
+	
+	private static WebDriver initInternetExplorer(String appURL) {
+		System.out.println("Launching firefox browser..");
+		System.setProperty("webdriver.chrome.driver", driverPath
+				+ "chromedriver.exe");
 		WebDriver driver = new FirefoxDriver();
 		driver.manage().window().maximize();
 		driver.navigate().to(appURL);
@@ -51,8 +67,9 @@ public class TestBase{
 	}
 
 	@Parameters({ "browserType", "appURL" })
-	@BeforeSuite
+	@BeforeTest
 	public void initializeTestBaseSetup(@Optional("chrome") String browserType, @Optional("http://dev.isbsindia.in/mmenroll/") String appURL) {		try {
+			System.out.println("Intializing browser...." + browserType);
 			setDriver(browserType, appURL);
 
 		} catch (Exception e) {

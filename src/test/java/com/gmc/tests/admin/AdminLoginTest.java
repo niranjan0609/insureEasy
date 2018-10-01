@@ -14,27 +14,27 @@ public class AdminLoginTest extends TestBase{
 	
 	private WebDriver driver;
 	private String errorMessage = "please enter valid password.";
+	private AdminLoginPage loginPage;
 
 		@BeforeClass
 		public void setUp() {
 			driver=getDriver();
 			String URL = driver.getCurrentUrl() + "admin";
 			driver.get(URL);
+			loginPage = new AdminLoginPage(driver);
 		}
 	
-	@Test
+	@Test(groups = { "smoke", "regression" })
 	public void validloginTest() throws InterruptedException{
-		AdminLoginPage loginPage = new AdminLoginPage(driver);
 		loginPage.enterLoginName("citibr");
-		loginPage.enterPassword("qaz456");
+		loginPage.enterPassword("qaz456dd");
 		AdminHomePage homePage = loginPage.NavigateToHomePage();
-		//homePage.verifySuccessfullLogin("BR LOGIN");
-		//Thread.sleep(1000);
-		
+		String hometext = homePage.getHomePageText();
+		Assert.assertTrue(hometext.contains("BR LOGIN"), "user not navigated to home page");
 	}
 	
-	@Test void invalidUsername() {
-		AdminLoginPage loginPage = new AdminLoginPage(driver);
+	@Test(groups="regression")
+	public void invalidUsername() {
 		loginPage.enterLoginName("45467437567844767865684");
 		loginPage.enterPassword("qa456");
 		loginPage.clickLoginBtn();

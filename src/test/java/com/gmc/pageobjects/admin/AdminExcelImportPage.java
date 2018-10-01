@@ -10,6 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import com.gmc.utils.*;
 //import org.testng.Assert;
 
 public class AdminExcelImportPage {
@@ -29,6 +30,11 @@ public class AdminExcelImportPage {
 	private By enrollToDate = By.name("ctl00$ContentPlaceHolder1$txtEnrollTo");
 	private By chooseFileLink = By.name("ctl00$ContentPlaceHolder1$fupEnroll");
 	private By uploadBtnLink = By.name("ctl00$ContentPlaceHolder1$btnUpload");
+	private By downloadExcelLink = By.id("ContentPlaceHolder1_lnkBtnDownload");
+	
+	//need to update
+	private By successMsg = By.name("successmsg");
+	private By failureMsg = By.name("failure");
 	String filePath = "D://ExcelImport.xlsx";
 
 	public String getExcelImportPageText() {
@@ -71,6 +77,31 @@ public class AdminExcelImportPage {
 		wait.until(ExpectedConditions.presenceOfElementLocated(uploadBtnLink));
 		WebElement upldbtn = driver.findElement(uploadBtnLink);
 		upldbtn.click();
+	}
+	
+	public String getSuccessMessage() {
+		wait.until(ExpectedConditions.presenceOfElementLocated(successMsg));
+		return driver.findElement(successMsg).getText();
+	}
+	
+	public String getLotMessage() {
+		wait.until(ExpectedConditions.presenceOfElementLocated(successMsg));
+		return driver.findElement(successMsg).getText();
+	}
+
+	public String getFailureMessage() {
+		wait.until(ExpectedConditions.presenceOfElementLocated(failureMsg));
+		return driver.findElement(failureMsg).getText();
+	}
+	
+	public void clickDownloadExcel() {
+		wait.until(ExpectedConditions.presenceOfElementLocated(downloadExcelLink));
+		driver.findElement(downloadExcelLink).click();
+	}
+	
+	public boolean verifyIfFileDownloaded(String fileDownloadPath, String Filename) throws InterruptedException {
+		Thread.sleep(2000);
+		return Util.isFileDownloaded(fileDownloadPath, Filename);
 	}
 
 	public void selectDate(String strdate) {

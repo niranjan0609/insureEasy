@@ -24,13 +24,16 @@ public class AdminLoginPage {
 	
 	public void enterLoginName(String username) {
 		wait.until(ExpectedConditions.presenceOfElementLocated(emailText));
+		
 		WebElement loginText = driver.findElement(emailText);
-				loginText.sendKeys(username);
+		loginText.clear();
+		loginText.sendKeys(username);
 	}
 
 	public void enterPassword(String password) {
 		wait.until(ExpectedConditions.presenceOfElementLocated(passwordText));
 		WebElement passwordElement = driver.findElement(passwordText);
+		passwordElement.clear();
 		passwordElement.sendKeys(password);
 	}
 	

@@ -31,7 +31,6 @@ public class SendWelcomeEmailTest extends TestBase{
 			loginPage.enterLoginName("citibr");
 			loginPage.enterPassword("qaz456");
 			homePage = loginPage.NavigateToHomePage();
-			homePage.verifySuccessfullLogin("BR LOGIN");
 		}
 
 	String xlFilePath = "D://EmpData.xlsx";
@@ -70,7 +69,6 @@ public class SendWelcomeEmailTest extends TestBase{
 		emailPage.sendEmail();
 		String actualMsg = emailPage.getMessage();
 		Assert.assertTrue(actualMsg.equals(SuccessMessage), "Failure message");
-	
 	}
 	
 	@AfterClass

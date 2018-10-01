@@ -1,12 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Test Suite 2" verbose="1">
-<parameter name="browserType" value="chrome" />
-<parameter name="appURL" value="http://dev.isbsindia.in/mmenroll/" />
+<suite name="Admin test suite" verbose="1" parallel="tests">
 
-	<test name="Admin Tests">
+<listeners>
+       <listener class-name="com.gmc.base.TestListener"/>
+  </listeners>
+
+<!-- 	<test name="firefox Tests">
+	<parameter name="browserType" value="firefox" />
+		<parameter name="appURL" value="http://dev.isbsindia.in/mmenroll/" />
+		<classes>
+			<class name="com.gmc.tests.admin.AdminLoginTest" />
+		</classes>
+	</test> -->
+
+<test name="Chrome Tests">
+<parameter name="browserType" value="chrome" />
+		<parameter name="appURL" value="http://dev.isbsindia.in/mmenroll/" />
 		<classes>
 			<class name="com.gmc.tests.admin.AdminLoginTest" />
 		</classes>
 	</test>
+
 </suite>
