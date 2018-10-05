@@ -37,7 +37,7 @@ public class MemberAddDependentsPage {
 	private By addChildBtn = By.id("ContentPlaceHolder1_btnAccpet");
 	
 	
-	public MemberAddDependentsPage NavigateToProfilePage() {
+	/*public MemberAddDependentsPage NavigateToProfilePage() {
 		wait.until(ExpectedConditions.presenceOfElementLocated(nextBtn));
 		driver.findElement(nextBtn).click();
 		return new MemberAddDependentsPage (driver);
@@ -61,5 +61,5 @@ public class MemberAddDependentsPage {
 		wait.until(ExpectedConditions.presenceOfElementLocated(submitBtn));
 		driver.findElement(submitBtn).click();
 	}
-
+*/
 }
