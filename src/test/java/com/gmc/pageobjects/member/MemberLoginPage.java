@@ -18,10 +18,10 @@ public class MemberLoginPage {
 		wait = new WebDriverWait(driver, 5);
 	}
 
-	private By EmpIDText = By.id("txtUserName");
+	private By EmpIDText = By.id("txtUsrName"); 
 	private By passwordText = By.id("txtPassword");
 	private By loginBtn = By.id("btnLogin");
-	private By forgotBtn = By.id("btnLogin");
+	//private By forgotBtn = By.id("btnLogin");
     private By logoImg = By.cssSelector(".logo");
 	private By errorMsg = By.id("lblMessage");
 	
@@ -41,17 +41,22 @@ public class MemberLoginPage {
 		wait.until(ExpectedConditions.presenceOfElementLocated(loginBtn));
 		driver.findElement(loginBtn).click();
 	}
-
-	/*public AdminHomePage NavigateToHomePage() {
+	
+	/*public void clickForgotPassword() {
+		wait.until(ExpectedConditions.presenceOfElementLocated(forgotBtn));
+		driver.findElement(forgotBtn).click();
+	}
+*/	public MemberHomePage NavigateToHomePage() {
 		wait.until(ExpectedConditions.presenceOfElementLocated(loginBtn));
 		driver.findElement(loginBtn).click();
-		return new AdminHomePage(driver);
+		return new MemberHomePage (driver);
 	}
+
 	
 	public String getErrorMessage() {
 		wait.until(ExpectedConditions.presenceOfElementLocated(errorMsg));
 		return driver.findElement(errorMsg).getText();
-	}*/
+	}
 }
 
 

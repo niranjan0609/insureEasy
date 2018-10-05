@@ -23,6 +23,10 @@ public class Util {
 		return sdf.format(date);
 	}
 	
+	public static String getCurrentTimeStamp() {
+		return new SimpleDateFormat("ddMMyyyy-HHmm").format(new Date());
+	}
+	
 	public static boolean isFileDownloaded(String downloadPath, String fileName) {
 		boolean flag = false;
 	    File dir = new File(downloadPath);

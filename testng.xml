@@ -6,14 +6,14 @@
        <listener class-name="com.gmc.base.TestListener"/>
   </listeners>
 
-<!-- 	<test name="firefox Tests">
+	<!-- <test name="firefox Tests">
 	<parameter name="browserType" value="firefox" />
 		<parameter name="appURL" value="http://dev.isbsindia.in/mmenroll/" />
 		<classes>
 			<class name="com.gmc.tests.admin.AdminLoginTest" />
 		</classes>
-	</test> -->
-
+	</test>
+ -->
 <test name="Chrome Tests">
 <parameter name="browserType" value="chrome" />
 		<parameter name="appURL" value="http://dev.isbsindia.in/mmenroll/" />

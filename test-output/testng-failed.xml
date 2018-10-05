@@ -1,33 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Admin test suite]" parallel="tests">
-  <test thread-count="5" name="Chrome Tests(failed)" parallel="tests">
-    <parameter name="appURL" value="http://dev.isbsindia.in/mmenroll/"/>
-    <parameter name="browserType" value="chrome"/>
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.gmc.tests.admin.AdminLoginTest">
+      <class name="com.gmc.tests.member.MemberEnrollmentTest">
         <methods>
+          <include name="VerifyNetworkHospitalsLink"/>
           <include name="initializeTestBaseSetup"/>
-          <include name="validloginTest"/>
-          <include name="setUp"/>
           <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.gmc.tests.admin.AdminLoginTest -->
-    </classes>
-  </test> <!-- Chrome Tests(failed) -->
-  <test thread-count="5" name="Firefox Tests(failed)" parallel="tests">
-    <parameter name="appURL" value="http://dev.isbsindia.in/mmenroll/"/>
-    <parameter name="browserType" value="firefox"/>
-    <classes>
-      <class name="com.gmc.tests.admin.AdminLoginTest">
-        <methods>
-          <include name="invalidUsername"/>
-          <include name="initializeTestBaseSetup"/>
-          <include name="validloginTest"/>
           <include name="setUp"/>
-          <include name="tearDown"/>
         </methods>
-      </class> <!-- com.gmc.tests.admin.AdminLoginTest -->
+      </class> <!-- com.gmc.tests.member.MemberEnrollmentTest -->
     </classes>
-  </test> <!-- Firefox Tests(failed) -->
-</suite> <!-- Failed suite [Admin test suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

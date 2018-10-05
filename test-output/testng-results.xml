@@ -1,16 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="0" passed="0">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Admin test suite" duration-ms="0" started-at="2018-09-29T08:29:15Z" finished-at="2018-09-29T08:29:15Z">
+  <suite name="Default suite" duration-ms="16537" started-at="2018-10-05T12:16:32Z" finished-at="2018-10-05T12:16:49Z">
     <groups>
       <group name="regression">
-        <method signature="AdminLoginTest.invalidUsername()[pri:0, instance:com.gmc.tests.admin.AdminLoginTest@126f7b2]" name="invalidUsername" class="com.gmc.tests.admin.AdminLoginTest"/>
-        <method signature="AdminLoginTest.validloginTest()[pri:0, instance:com.gmc.tests.admin.AdminLoginTest@126f7b2]" name="validloginTest" class="com.gmc.tests.admin.AdminLoginTest"/>
+        <method signature="MemberRaiseQueryTest.raiseAQuery()[pri:0, instance:com.gmc.tests.member.MemberRaiseQueryTest@646db9]" name="raiseAQuery" class="com.gmc.tests.member.MemberRaiseQueryTest"/>
       </group> <!-- regression -->
       <group name="smoke">
-        <method signature="AdminLoginTest.validloginTest()[pri:0, instance:com.gmc.tests.admin.AdminLoginTest@126f7b2]" name="validloginTest" class="com.gmc.tests.admin.AdminLoginTest"/>
+        <method signature="MemberRaiseQueryTest.raiseAQuery()[pri:0, instance:com.gmc.tests.member.MemberRaiseQueryTest@646db9]" name="raiseAQuery" class="com.gmc.tests.member.MemberRaiseQueryTest"/>
       </group> <!-- smoke -->
     </groups>
-  </suite> <!-- Admin test suite -->
+    <test name="Default test" duration-ms="16537" started-at="2018-10-05T12:16:32Z" finished-at="2018-10-05T12:16:49Z">
+      <class name="com.gmc.tests.member.MemberRaiseQueryTest">
+        <test-method status="PASS" signature="initializeTestBaseSetup(java.lang.String, java.lang.String, org.testng.ITestContext)[pri:0, instance:com.gmc.tests.member.MemberRaiseQueryTest@646db9]" name="initializeTestBaseSetup" is-config="true" duration-ms="4779" started-at="2018-10-05T12:16:32Z" finished-at="2018-10-05T12:16:37Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[http://dev.isbsindia.in/mmenroll/]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[org.testng.TestRunner@55af6b]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeTestBaseSetup -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.gmc.tests.member.MemberRaiseQueryTest@646db9]" name="setUp" is-config="true" duration-ms="5121" started-at="2018-10-05T12:16:37Z" finished-at="2018-10-05T12:16:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="raiseAQuery()[pri:0, instance:com.gmc.tests.member.MemberRaiseQueryTest@646db9]" name="raiseAQuery" duration-ms="5923" started-at="2018-10-05T12:16:42Z" finished-at="2018-10-05T12:16:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- raiseAQuery -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.gmc.tests.member.MemberRaiseQueryTest@646db9]" name="tearDown" is-config="true" duration-ms="664" started-at="2018-10-05T12:16:48Z" finished-at="2018-10-05T12:16:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.gmc.tests.member.MemberRaiseQueryTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

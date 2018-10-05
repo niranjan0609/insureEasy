@@ -24,7 +24,6 @@ public class AdminLoginPage {
 	
 	public void enterLoginName(String username) {
 		wait.until(ExpectedConditions.presenceOfElementLocated(emailText));
-		
 		WebElement loginText = driver.findElement(emailText);
 		loginText.clear();
 		loginText.sendKeys(username);
