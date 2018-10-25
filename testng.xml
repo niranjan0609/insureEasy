@@ -18,7 +18,7 @@
 <parameter name="browserType" value="chrome" />
 		<parameter name="appURL" value="http://dev.isbsindia.in/mmenroll/" />
 		<classes>
-			<class name="com.gmc.tests.admin.AdminLoginTest" />
+			<class name="com.gmc.tests.admin.AdminSearchEmployeeTest" />
 		</classes>
 	</test>
 

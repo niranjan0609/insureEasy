@@ -3,14 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.gmc.tests.member.MemberEnrollmentTest">
+      <class name="com.gmc.tests.admin.AdminSearchEmployeeTest">
         <methods>
-          <include name="VerifyNetworkHospitalsLink"/>
+          <include name="ChangeEmailID"/>
           <include name="initializeTestBaseSetup"/>
-          <include name="tearDown"/>
           <include name="setUp"/>
+          <include name="searchEmp"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- com.gmc.tests.member.MemberEnrollmentTest -->
+      </class> <!-- com.gmc.tests.admin.AdminSearchEmployeeTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

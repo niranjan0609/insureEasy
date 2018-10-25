@@ -10,6 +10,7 @@ import org.apache.poi.hssf.usermodel.HSSFDateUtil;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellType;
+import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
@@ -56,7 +57,9 @@ public class ExcelReader {
 			if (cell.getCellTypeEnum() == CellType.STRING)
 				return cell.getStringCellValue();
 			else if (cell.getCellTypeEnum() == CellType.NUMERIC || cell.getCellTypeEnum() == CellType.FORMULA) {
-				String cellValue = String.valueOf(cell.getNumericCellValue());
+				DataFormatter dformatter = new DataFormatter();
+				String cellValue = dformatter.formatCellValue(cell);
+				//String cellValue = String.valueOf(cell.getNumericCellValue());
 				if (HSSFDateUtil.isCellDateFormatted(cell)) {
 					DateFormat df = new SimpleDateFormat("dd/MM/yy");
 					Date date = cell.getDateCellValue();

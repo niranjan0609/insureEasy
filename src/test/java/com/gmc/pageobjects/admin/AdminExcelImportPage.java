@@ -31,9 +31,10 @@ public class AdminExcelImportPage {
 	private By chooseFileLink = By.name("ctl00$ContentPlaceHolder1$fupEnroll");
 	private By uploadBtnLink = By.name("ctl00$ContentPlaceHolder1$btnUpload");
 	private By downloadExcelLink = By.id("ContentPlaceHolder1_lnkBtnDownload");
+	private By NextBtn = By.id("ContentPlaceHolder1_btnNext");
 	
 	//need to update
-	private By successMsg = By.name("successmsg");
+	private By successMsg = By.id("ContentPlaceHolder1_lblMessage");
 	private By failureMsg = By.name("failure");
 	String filePath = "D://ExcelImport.xlsx";
 
@@ -143,4 +144,16 @@ public class AdminExcelImportPage {
 		}
 	}
 
+	public void clickNextBtn() {
+		// TODO Auto-generated method stub
+		wait.until(ExpectedConditions.presenceOfElementLocated(NextBtn));
+		driver.findElement(NextBtn).click();
+	}
+
+
+	/*public void clickNextBtn() {
+		// TODO Auto-generated method stub
+		
+	}
+*/
 }

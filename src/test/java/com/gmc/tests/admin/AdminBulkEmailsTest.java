@@ -5,6 +5,8 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.Status;
+import com.gmc.base.ExtentTestManager;
 import com.gmc.base.TestBase;
 import com.gmc.pageobjects.admin.AdminBulkEmailsPage;
 import com.gmc.pageobjects.admin.AdminHomePage;
@@ -32,14 +34,19 @@ public class AdminBulkEmailsTest extends TestBase {
      @Test
  	 public void excelImport() throws InterruptedException {
     	 bulkPage = homePage.clickBulkEmail();
+    	 ExtentTestManager.getTest().log(Status.INFO, "Clicked on Bulk Email Link");
     	 bulkPage.selectCompany("CITIBANK N A");
+    	 ExtentTestManager.getTest().log(Status.INFO, "Selected the Company");
     	 bulkPage.selectLotno("10539(30-Jul-2018-to-30-Sep-2018)");
+    	 ExtentTestManager.getTest().log(Status.INFO, "Selected Lot No:");
     	 bulkPage.selectEmailType("Welcome Mails");
+    	 ExtentTestManager.getTest().log(Status.INFO, "Selected Mailer Type");
     	 bulkPage.selectTestOption();
     	 bulkPage.SampleEmailAddress("niranjan.reddy@isbsindia.in");
     	 bulkPage.clickSendMail();
+    	 ExtentTestManager.getTest().log(Status.INFO, "Clicked on Send Mail");
     	 Thread.sleep(3000);
-    	}
+    	     	}
      
   
 @AfterClass

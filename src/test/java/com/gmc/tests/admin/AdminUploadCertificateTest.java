@@ -5,6 +5,8 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.Status;
+import com.gmc.base.ExtentTestManager;
 import com.gmc.base.TestBase;
 import com.gmc.pageobjects.admin.AdminHomePage;
 import com.gmc.pageobjects.admin.AdminLoginPage;
@@ -31,9 +33,11 @@ public class AdminUploadCertificateTest extends TestBase{
      @Test
  	 public void uploadCertificate() throws InterruptedException {
     	 uploadCertiPage = homePage.clickUploadCertificate();
+    	 ExtentTestManager.getTest().log(Status.INFO, "Clicked on Upload Certificate after successful Login ");
     	 uploadCertiPage.uploadFile();
     	 Thread.sleep(3000);
     	 uploadCertiPage.clickuploadbtn();
+    	 ExtentTestManager.getTest().log(Status.INFO, "Ceritificate Upload successful ");
     	
     	}
        

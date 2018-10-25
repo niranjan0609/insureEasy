@@ -1,19 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="2" total="4" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="16537" started-at="2018-10-05T12:16:32Z" finished-at="2018-10-05T12:16:49Z">
+  <suite name="Admin test suite" duration-ms="30659" started-at="2018-10-25T10:02:30Z" finished-at="2018-10-25T10:03:01Z">
     <groups>
-      <group name="regression">
-        <method signature="MemberRaiseQueryTest.raiseAQuery()[pri:0, instance:com.gmc.tests.member.MemberRaiseQueryTest@646db9]" name="raiseAQuery" class="com.gmc.tests.member.MemberRaiseQueryTest"/>
-      </group> <!-- regression -->
-      <group name="smoke">
-        <method signature="MemberRaiseQueryTest.raiseAQuery()[pri:0, instance:com.gmc.tests.member.MemberRaiseQueryTest@646db9]" name="raiseAQuery" class="com.gmc.tests.member.MemberRaiseQueryTest"/>
-      </group> <!-- smoke -->
     </groups>
-    <test name="Default test" duration-ms="16537" started-at="2018-10-05T12:16:32Z" finished-at="2018-10-05T12:16:49Z">
-      <class name="com.gmc.tests.member.MemberRaiseQueryTest">
-        <test-method status="PASS" signature="initializeTestBaseSetup(java.lang.String, java.lang.String, org.testng.ITestContext)[pri:0, instance:com.gmc.tests.member.MemberRaiseQueryTest@646db9]" name="initializeTestBaseSetup" is-config="true" duration-ms="4779" started-at="2018-10-05T12:16:32Z" finished-at="2018-10-05T12:16:37Z">
+    <test name="Chrome Tests" duration-ms="30659" started-at="2018-10-25T10:02:30Z" finished-at="2018-10-25T10:03:01Z">
+      <class name="com.gmc.tests.admin.AdminSearchEmployeeTest">
+        <test-method status="PASS" signature="initializeTestBaseSetup(java.lang.String, java.lang.String, org.testng.ITestContext)[pri:0, instance:com.gmc.tests.admin.AdminSearchEmployeeTest@17dd107]" name="initializeTestBaseSetup" is-config="true" duration-ms="9959" started-at="2018-10-25T10:02:30Z" finished-at="2018-10-25T10:02:40Z">
           <params>
             <param index="0">
               <value>
@@ -27,26 +21,30 @@
             </param>
             <param index="2">
               <value>
-                <![CDATA[org.testng.TestRunner@55af6b]]>
+                <![CDATA[org.testng.TestRunner@a242ce]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeTestBaseSetup -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.gmc.tests.member.MemberRaiseQueryTest@646db9]" name="setUp" is-config="true" duration-ms="5121" started-at="2018-10-05T12:16:37Z" finished-at="2018-10-05T12:16:42Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.gmc.tests.admin.AdminSearchEmployeeTest@17dd107]" name="setUp" is-config="true" duration-ms="2248" started-at="2018-10-25T10:02:40Z" finished-at="2018-10-25T10:02:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="raiseAQuery()[pri:0, instance:com.gmc.tests.member.MemberRaiseQueryTest@646db9]" name="raiseAQuery" duration-ms="5923" started-at="2018-10-05T12:16:42Z" finished-at="2018-10-05T12:16:48Z">
+        <test-method status="PASS" signature="searchEmp()[pri:0, instance:com.gmc.tests.admin.AdminSearchEmployeeTest@17dd107]" name="searchEmp" duration-ms="6237" started-at="2018-10-25T10:02:43Z" finished-at="2018-10-25T10:02:49Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- raiseAQuery -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.gmc.tests.member.MemberRaiseQueryTest@646db9]" name="tearDown" is-config="true" duration-ms="664" started-at="2018-10-05T12:16:48Z" finished-at="2018-10-05T12:16:49Z">
+        </test-method> <!-- searchEmp -->
+        <test-method status="PASS" signature="ChangeEmailID()[pri:2, instance:com.gmc.tests.admin.AdminSearchEmployeeTest@17dd107]" name="ChangeEmailID" duration-ms="11420" started-at="2018-10-25T10:02:49Z" finished-at="2018-10-25T10:03:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ChangeEmailID -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.gmc.tests.admin.AdminSearchEmployeeTest@17dd107]" name="tearDown" is-config="true" duration-ms="673" started-at="2018-10-25T10:03:00Z" finished-at="2018-10-25T10:03:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.gmc.tests.member.MemberRaiseQueryTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- com.gmc.tests.admin.AdminSearchEmployeeTest -->
+    </test> <!-- Chrome Tests -->
+  </suite> <!-- Admin test suite -->
 </testng-results>

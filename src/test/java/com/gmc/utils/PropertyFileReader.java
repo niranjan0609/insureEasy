@@ -15,8 +15,13 @@ public class PropertyFileReader {
     private static String password;
     private static String adminURL;
     private static String invalidusername;
+    private static String usernameToSearch;
+    private static String countryCode;
+    private static String mobileNo;
+    private static String changeEmailID;
+    private static String usernameToReset;
  
-    //Create a Singleton instance. We need only one instanc.
+    //Create a Singleton instance. We need only one instance.
     public static PropertyFileReader getInstance () {
         if (instance == null) {
             synchronized (lock) {
@@ -40,11 +45,16 @@ public class PropertyFileReader {
             System.out.println("Configuration properties file cannot be found");
         }
  
-        //Get properties from configuration.propertie
+        //Get properties from configuration.properties
         username = prop.getProperty("username");
         password = prop.getProperty("password");
         adminURL = prop.getProperty("adminURL");
         invalidusername = prop.getProperty("invalidusername");
+        usernameToSearch = prop.getProperty("usernameToSearch");
+        countryCode = prop.getProperty("countryCode");
+        mobileNo = prop.getProperty("mobileNo");
+        changeEmailID = prop.getProperty("EmailID");
+        usernameToReset = prop.getProperty("UsernameToReset");
     }
  
     public String getUsername () {
@@ -58,7 +68,36 @@ public class PropertyFileReader {
         return password;
     }
     
+    public String getUserNameToSearch () {
+        return usernameToSearch;
+    }
+    
     public String getAdminURL () {
         return adminURL;
     }
+
+	public String getCountryCode() {
+		// TODO Auto-generated method stub
+		return countryCode;
+	}
+
+	public String getMobileNo() {
+		// TODO Auto-generated method stub
+		return mobileNo;
+	}
+
+	/*public String getEmailID() {
+		// TODO Auto-generated method stub
+		return changeEmailID;
+	}*/
+
+	public String getUserNameToReset() {
+		// TODO Auto-generated method stub
+		return usernameToReset;
+	}
+
+	public String getEmailID() {
+		// TODO Auto-generated method stub
+		return changeEmailID;
+	}
 }

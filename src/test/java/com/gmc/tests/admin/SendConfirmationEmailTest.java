@@ -7,6 +7,8 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.Status;
+import com.gmc.base.ExtentTestManager;
 import com.gmc.base.TestBase;
 import com.gmc.pageobjects.admin.AdminHomePage;
 import com.gmc.pageobjects.admin.AdminLoginPage;
@@ -62,12 +64,12 @@ public class SendConfirmationEmailTest extends TestBase {
 	@Test(dataProvider = "userData")
 	public void sendEmail(String employeeId) {
 		SendConfirmationEmailPage emailPage = homePage.clickResendConfirmationemail();
-		
+		ExtentTestManager.getTest().log(Status.INFO, "Clicked on Resend Confirmation  Email after successful Login ");
 		emailPage.enterEmployeeID(employeeId);
+		ExtentTestManager.getTest().log(Status.INFO, "Entered Emp ID's to send Confirmation Email");
 		emailPage.clickSearchbtn();
 		emailPage.sendEmail();
-	
-	
+	    ExtentTestManager.getTest().log(Status.INFO, "Confirmation Emails sent to the selected Employees");
 	}
 	
 	@AfterClass

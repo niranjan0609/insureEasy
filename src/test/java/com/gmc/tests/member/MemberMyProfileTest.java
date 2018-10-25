@@ -5,6 +5,8 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.Status;
+import com.gmc.base.ExtentTestManager;
 import com.gmc.base.TestBase;
 import com.gmc.pageobjects.member.MemberEnrollmentPage;
 import com.gmc.pageobjects.member.MemberHomePage;
@@ -33,28 +35,38 @@ public class MemberMyProfileTest extends TestBase {
 	@Test
 	public void updatePassword() throws InterruptedException{
 		profilePage = homePage.clickMyProfile();
+		ExtentTestManager.getTest().log(Status.INFO, "Clicked on My profile");
 		profilePage.enterNewPassword("Qazxsw@221");
+		ExtentTestManager.getTest().log(Status.INFO, "Entered New Password");
 		profilePage.confirmNewPassword("Qazxsw@221");
+		ExtentTestManager.getTest().log(Status.INFO, "Confirmed the New Password");
 		profilePage.clickUpdatePasswordBtn();
 		Thread.sleep(3000);
+		ExtentTestManager.getTest().log(Status.INFO, "Clicked on Update Password Button");
 	}
 	
 	
 	@Test
 	public void updateMobileNo() throws InterruptedException{
 		profilePage = homePage.clickMyProfile();
+		ExtentTestManager.getTest().log(Status.INFO, "Clicked on My profile");
 		profilePage.enterMobileNo("9832535411");
+		ExtentTestManager.getTest().log(Status.INFO, "Entered Mobile Number");
 		profilePage.clickUpdateMobileNoBtn();
 		Thread.sleep(3000);
+		ExtentTestManager.getTest().log(Status.INFO, "Clicked on Update Mobile Number Button");
 		}
 	
 
 	@Test
 	public void updateAlteranateEmail() throws InterruptedException{
 		profilePage = homePage.clickMyProfile();
+		ExtentTestManager.getTest().log(Status.INFO, "Clicked on My profile");
 		profilePage.enterAlternateEmail("niranjan.reddy@isbsindia.in");
+		ExtentTestManager.getTest().log(Status.INFO, "Entered Alternate Email ID");
 		profilePage.clickUpdateAlternateEmailBtn();
 		Thread.sleep(3000);
+		ExtentTestManager.getTest().log(Status.INFO, "Clicked on Update Email Id Button");
 		}
 	
 	@AfterClass

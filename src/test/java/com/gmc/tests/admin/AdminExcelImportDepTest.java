@@ -5,6 +5,8 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.Status;
+import com.gmc.base.ExtentTestManager;
 import com.gmc.base.TestBase;
 import com.gmc.pageobjects.admin.AdminExcelImportDepPage;
 import com.gmc.pageobjects.admin.AdminHomePage;
@@ -34,10 +36,14 @@ public class AdminExcelImportDepTest extends TestBase{
      @Test
  	 public void excelImport() throws InterruptedException {
     	 excelDepPage = homePage.clickExcelDep();
+    	 ExtentTestManager.getTest().log(Status.INFO, "From HomePage, Clicked on Import Excel Dependents");
     	 excelDepPage.selectCompany("CITIBANK N A");
+    	 ExtentTestManager.getTest().log(Status.INFO, "Selected the Entity");
     	 excelDepPage.selectLotno("10539(30-Jul-2018-to-30-Sep-2018)");
+    	 ExtentTestManager.getTest().log(Status.INFO, "Selected Lot No");
     	 excelDepPage.uploadExcelFile();
     	 excelDepPage.clickUploadBtn();
+    	 ExtentTestManager.getTest().log(Status.INFO, "Clicked on Upload Button");
     	
     	}
      

@@ -58,7 +58,7 @@ public class AdminLoginTest extends TestBase {
 		ExtentTestManager.getTest().log(Status.INFO, "Clicking login button...");
 		String error = loginPage.getErrorMessage();
 		Assert.assertEquals(error, errorMessage, "Error message is not correct");
-		ExtentTestManager.getTest().log(Status.INFO, "invalid login test completed");
+		ExtentTestManager.getTest().log(Status.INFO, "Unable to login with  invalid Username hence the Test is Passed");
 	}
 
 	@AfterClass
