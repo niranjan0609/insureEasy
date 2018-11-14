@@ -11,6 +11,7 @@ import com.gmc.base.TestBase;
 import com.gmc.pageobjects.admin.AdminHomePage;
 import com.gmc.pageobjects.admin.AdminLoginPage;
 import com.gmc.pageobjects.admin.AdminUploadCertificatePage;
+import com.gmc.utils.PropertyFileReader;
 
 public class AdminUploadCertificateTest extends TestBase{
 	private WebDriver driver;
@@ -18,15 +19,19 @@ public class AdminUploadCertificateTest extends TestBase{
 	public AdminHomePage homePage;
 	public AdminUploadCertificatePage uploadCertiPage;
 	
+	String validUsername = PropertyFileReader.getInstance().getUsername();
+	String validPassword = PropertyFileReader.getInstance().getPassword();
+    String adminURL = PropertyFileReader.getInstance().getAdminURL();
+
+    
 	
 	@BeforeClass
 	public void setUp() {
 		driver=getDriver();
-		String URL = driver.getCurrentUrl() + "admin";
-		driver.get(URL);
+		driver.get(adminURL);
 		loginPage = new AdminLoginPage(driver);
-		loginPage.enterLoginName("citibr");
-		loginPage.enterPassword("qaz456");
+		loginPage.enterLoginName(validUsername);
+		loginPage.enterPassword(validPassword);
 		homePage = loginPage.NavigateToHomePage();
 	}
 

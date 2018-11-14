@@ -14,6 +14,7 @@ import com.gmc.pageobjects.admin.AdminHomePage;
 import com.gmc.pageobjects.admin.AdminLoginPage;
 import com.gmc.pageobjects.admin.SendWelcomeEmailPage;
 import com.gmc.utils.ExcelReader;
+import com.gmc.utils.PropertyFileReader;
 
 public class SendWelcomeEmailTest extends TestBase{
 	
@@ -24,14 +25,19 @@ public class SendWelcomeEmailTest extends TestBase{
 	public AdminLoginPage loginPage;
 	public AdminHomePage homePage;
 
+	String validUsername = PropertyFileReader.getInstance().getUsername();
+	String validPassword = PropertyFileReader.getInstance().getPassword();
+    String adminURL = PropertyFileReader.getInstance().getAdminURL();
+    //String xlFilePathWelcomeMail = PropertyFileReader.getInstance().getExcelFile();
+   
+
 		@BeforeClass
 		public void setUp() {
 			driver=getDriver();
-			String URL = driver.getCurrentUrl() + "admin";
-			driver.get(URL);
+			driver.get(adminURL);
 			loginPage = new AdminLoginPage(driver);
-			loginPage.enterLoginName("citibr");
-			loginPage.enterPassword("qaz456");
+			loginPage.enterLoginName(validUsername);
+			loginPage.enterPassword(validPassword);
 			homePage = loginPage.NavigateToHomePage();
 		}
 

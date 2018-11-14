@@ -14,6 +14,7 @@ import com.gmc.pageobjects.admin.AdminHomePage;
 import com.gmc.pageobjects.admin.AdminLoginPage;
 import com.gmc.pageobjects.admin.SendConfirmationEmailPage;
 import com.gmc.utils.ExcelReader;
+import com.gmc.utils.PropertyFileReader;
 
 public class SendConfirmationEmailTest extends TestBase {
 	private WebDriver driver;
@@ -23,19 +24,25 @@ public class SendConfirmationEmailTest extends TestBase {
 	public AdminLoginPage loginPage;
 	public AdminHomePage homePage;
 	public SendConfirmationEmailPage emailPage;
+	
+	String validUsername = PropertyFileReader.getInstance().getUsername();
+	String validPassword = PropertyFileReader.getInstance().getPassword();
+    String adminURL = PropertyFileReader.getInstance().getAdminURL();
+    String xlFilePath = PropertyFileReader.getInstance().getExcelFile();
+    String lotNoBulk = PropertyFileReader.getInstance().getlotNoBulk();
+    String emailType = PropertyFileReader.getInstance().getEmailType();
 
 		@BeforeClass
 		public void setUp() {
 			driver=getDriver();
-			String URL = driver.getCurrentUrl() + "admin";
-			driver.get(URL);
+			driver.get(adminURL);
 			loginPage = new AdminLoginPage(driver);
-			loginPage.enterLoginName("citibr");
-			loginPage.enterPassword("qaz456");
+			loginPage.enterLoginName(validUsername);
+			loginPage.enterPassword(validPassword);
 			homePage = loginPage.NavigateToHomePage();
 		}
 
-	String xlFilePath = "D://EmpData.xlsx";
+	//String xlFilePath = "D://EmpData.xlsx";
 	ExcelReader sheet = null;
 
 	public Object[][] testData(String xlFilePath, String sheetName) throws Exception {

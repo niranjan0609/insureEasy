@@ -3,15 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.gmc.tests.admin.AdminSearchEmployeeTest">
+      <class name="com.gmc.tests.admin.AdminUpdateDependentsTest">
         <methods>
-          <include name="ChangeEmailID"/>
           <include name="initializeTestBaseSetup"/>
           <include name="setUp"/>
           <include name="searchEmp"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- com.gmc.tests.admin.AdminSearchEmployeeTest -->
+      </class> <!-- com.gmc.tests.admin.AdminUpdateDependentsTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

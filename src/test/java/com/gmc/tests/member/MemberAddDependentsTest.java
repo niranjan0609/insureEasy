@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 import com.gmc.utils.ExcelReader;
 
-public class MemberDependentTest {
+public class MemberAddDependentsTest {
 	
 
 

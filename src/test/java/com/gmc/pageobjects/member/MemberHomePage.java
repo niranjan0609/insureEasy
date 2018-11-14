@@ -86,6 +86,11 @@ public class MemberHomePage {
 		return new MemberRaiseQueryPage (driver);
 	}
 	
+	public MemberAddDependentsPage clickAddDependents() {
+		wait.until(ExpectedConditions.presenceOfElementLocated(adddependentLink));
+		driver.findElement(adddependentLink).click();
+		return new MemberAddDependentsPage (driver);
+	}
 	
 }
                      

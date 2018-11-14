@@ -30,6 +30,9 @@ public class AdminExcelImportTest extends TestBase {
 	String validUsername = PropertyFileReader.getInstance().getUsername();
 	String validPassword = PropertyFileReader.getInstance().getPassword();
     String adminURL = PropertyFileReader.getInstance().getAdminURL();
+    String companyName = PropertyFileReader.getInstance().getCompanyName();
+    String enrollFrom = PropertyFileReader.getInstance().getenrollFromDate();
+    String enrollTo = PropertyFileReader.getInstance().getenrollToDate();
 	
 	@BeforeClass
 	public void setUp() {
@@ -46,11 +49,11 @@ public class AdminExcelImportTest extends TestBase {
  	 public void excelImport() throws InterruptedException {
     	 excelPage = homePage.clickExcelImport();
     	 ExtentTestManager.getTest().log(Status.INFO, "From HomePage, Clicked on Excel Import");
-    	 excelPage.selectCompany("CITIBANK N A");
+    	 excelPage.selectCompany(companyName);
     	 ExtentTestManager.getTest().log(Status.INFO, "Selected the Entity");
        	 excelPage.uploadExcelFile();
-    	 excelPage.enterEnrollFromDate("09-26-2018");
-    	 excelPage.enterEnrollToDate("10-30-2018");
+    	 excelPage.enterEnrollFromDate(enrollFrom);
+    	 excelPage.enterEnrollToDate(enrollTo);
     	 ExtentTestManager.getTest().log(Status.INFO, "Selected Enroll From & Enroll To Dates");
          excelPage.clickuploadbtn();
     	 ExtentTestManager.getTest().log(Status.INFO, "Clicked On UPLOAD Button");

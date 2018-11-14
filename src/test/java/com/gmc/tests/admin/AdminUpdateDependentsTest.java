@@ -12,6 +12,7 @@ import com.gmc.pageobjects.admin.AdminHomePage;
 import com.gmc.pageobjects.admin.AdminLoginPage;
 
 import com.gmc.pageobjects.admin.AdminUpdateDependentsPage;
+import com.gmc.utils.PropertyFileReader;
 
 public class AdminUpdateDependentsTest extends TestBase
 {
@@ -20,15 +21,28 @@ public class AdminUpdateDependentsTest extends TestBase
 	public AdminLoginPage loginPage;
 	public AdminHomePage homePage;
     public AdminUpdateDependentsPage updatePage;
+    
+    String validUsername = PropertyFileReader.getInstance().getUsername();
+	String validPassword = PropertyFileReader.getInstance().getPassword();
+    String adminURL = PropertyFileReader.getInstance().getAdminURL();
+    String usernameToSearch = PropertyFileReader.getInstance().getUserNameToSearch();
+    String changeName = PropertyFileReader.getInstance().getName();
+    String changeDay = PropertyFileReader.getInstance().getDayDOB();
+    String changeMon = PropertyFileReader.getInstance().getMOnDOB();
+    String changeYear = PropertyFileReader.getInstance().getYearDOB();
+    String changeRelationship = PropertyFileReader.getInstance().getRelationship();
+    String enterRemarks = PropertyFileReader.getInstance().getRemarks();
+
+
+    
 		
     @BeforeClass
 		public void setUp() {
 			driver=getDriver();
-			String URL = driver.getCurrentUrl() + "admin";
-			driver.get(URL);
+			driver.get(adminURL);
 			loginPage = new AdminLoginPage(driver);
-			loginPage.enterLoginName("citibr");
-			loginPage.enterPassword("qaz456");
+			loginPage.enterLoginName(validUsername);
+			loginPage.enterPassword(validPassword);
 			homePage = loginPage.NavigateToHomePage();
 		}
     
@@ -36,7 +50,7 @@ public class AdminUpdateDependentsTest extends TestBase
 		public void searchEmp() throws InterruptedException {
 			updatePage = homePage.clickToUpdateDependents();
 			ExtentTestManager.getTest().log(Status.INFO, "Clicked on Update Dependents after successful login");
-			updatePage.enterEmployeeID("9005");
+			updatePage.enterEmployeeID(usernameToSearch);
 			Thread.sleep(2000);
 			ExtentTestManager.getTest().log(Status.INFO, "Entered Emp ID to edit dependents after successful Login ");
 			updatePage.clickSearchbtn();
@@ -44,12 +58,12 @@ public class AdminUpdateDependentsTest extends TestBase
 			Thread.sleep(3000);
 			ExtentTestManager.getTest().log(Status.INFO, "Clicking on Search Employee after successful Login ");
 			updatePage.clickEditdependent();
-			updatePage.changeName("prerna");
-			updatePage.changeDay("21");
-			updatePage.changeMon("Dec");
-			updatePage.changeYear("1996");
-			updatePage.changeRelationship("WIFE");
-			updatePage.EnterCorrectionRemarks("Changed to daughter");
+			updatePage.changeName(changeName);
+			updatePage.changeDay(changeDay);
+			updatePage.changeMon(changeMon);
+			updatePage.changeYear(changeYear);
+			updatePage.changeRelationship(changeRelationship);
+			updatePage.EnterCorrectionRemarks(enterRemarks);
 			updatePage.clickOnSubmit();
 			ExtentTestManager.getTest().log(Status.INFO, "After editing dependents, entered correction remarks and submitted ");
 			}
