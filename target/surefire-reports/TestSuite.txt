@@ -1,120 +1,15 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 10, Failures: 10, Errors: 0, Skipped: 0, Time elapsed: 62.657 sec <<< FAILURE! - in TestSuite
-sendEmail(com.gmc.tests.admin.SendWelcomeEmailTest)  Time elapsed: 7.173 sec  <<< FAILURE!
-org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.cssSelector: tbody td a:contains('send mail') (tried for 5 second(s) with 500 milliseconds interval)
-	at com.gmc.tests.admin.SendWelcomeEmailTest.sendEmail(SendWelcomeEmailTest.java:63)
-Caused by: org.openqa.selenium.InvalidSelectorException: 
-invalid selector: An invalid or illegal selector was specified
-  (Session info: chrome=69.0.3497.100)
-  (Driver info: chromedriver=2.42.591088 (7b2b2dca23cca0862f674758c9a3933e685c27d5),platform=Windows NT 6.3.9600 x86) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/invalid_selector_exception.html
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'HARRY', ip: '192.168.56.1', os.name: 'Windows 8.1', os.arch: 'x86', os.version: '6.3', java.version: '1.8.0_101'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.42.591088 (7b2b2dca23cca0..., userDataDir: C:\Users\VISISHTA\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:64499}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 69.0.3497.100, webStorageEnabled: true}
-Session ID: b5d4c5efff2d0dd4422033677cfb049e
-*** Element info: {Using=css selector, value=tbody td a:contains('send mail')}
-	at com.gmc.tests.admin.SendWelcomeEmailTest.sendEmail(SendWelcomeEmailTest.java:63)
-
-sendEmail(com.gmc.tests.admin.SendWelcomeEmailTest)  Time elapsed: 5.262 sec  <<< FAILURE!
-org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.id: txtUserName (tried for 5 second(s) with 500 milliseconds interval)
-	at com.gmc.tests.admin.SendWelcomeEmailTest.sendEmail(SendWelcomeEmailTest.java:55)
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 45.644 s <<< FAILURE! - in TestSuite
+testPrivateCar(com.ieasy.tests.PrivateCarTest)  Time elapsed: 20.244 s  <<< FAILURE!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.cssSelector: h1.title (tried for 20 second(s) with 500 milliseconds interval)
+	at com.ieasy.tests.PrivateCarTest.testPrivateCar(PrivateCarTest.java:108)
 Caused by: org.openqa.selenium.NoSuchElementException: 
-Cannot locate an element using By.id: txtUserName
+Cannot locate an element using By.cssSelector: h1.title
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'HARRY', ip: '192.168.56.1', os.name: 'Windows 8.1', os.arch: 'x86', os.version: '6.3', java.version: '1.8.0_101'
+System info: host: 'NIRANJAN-REDDY', ip: '192.168.200.92', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_201'
 Driver info: driver.version: unknown
-	at com.gmc.tests.admin.SendWelcomeEmailTest.sendEmail(SendWelcomeEmailTest.java:55)
-
-sendEmail(com.gmc.tests.admin.SendWelcomeEmailTest)  Time elapsed: 5.325 sec  <<< FAILURE!
-org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.id: txtUserName (tried for 5 second(s) with 500 milliseconds interval)
-	at com.gmc.tests.admin.SendWelcomeEmailTest.sendEmail(SendWelcomeEmailTest.java:55)
-Caused by: org.openqa.selenium.NoSuchElementException: 
-Cannot locate an element using By.id: txtUserName
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'HARRY', ip: '192.168.56.1', os.name: 'Windows 8.1', os.arch: 'x86', os.version: '6.3', java.version: '1.8.0_101'
-Driver info: driver.version: unknown
-	at com.gmc.tests.admin.SendWelcomeEmailTest.sendEmail(SendWelcomeEmailTest.java:55)
-
-sendEmail(com.gmc.tests.admin.SendWelcomeEmailTest)  Time elapsed: 5.318 sec  <<< FAILURE!
-org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.id: txtUserName (tried for 5 second(s) with 500 milliseconds interval)
-	at com.gmc.tests.admin.SendWelcomeEmailTest.sendEmail(SendWelcomeEmailTest.java:55)
-Caused by: org.openqa.selenium.NoSuchElementException: 
-Cannot locate an element using By.id: txtUserName
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'HARRY', ip: '192.168.56.1', os.name: 'Windows 8.1', os.arch: 'x86', os.version: '6.3', java.version: '1.8.0_101'
-Driver info: driver.version: unknown
-	at com.gmc.tests.admin.SendWelcomeEmailTest.sendEmail(SendWelcomeEmailTest.java:55)
-
-sendEmail(com.gmc.tests.admin.SendWelcomeEmailTest)  Time elapsed: 5.298 sec  <<< FAILURE!
-org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.id: txtUserName (tried for 5 second(s) with 500 milliseconds interval)
-	at com.gmc.tests.admin.SendWelcomeEmailTest.sendEmail(SendWelcomeEmailTest.java:55)
-Caused by: org.openqa.selenium.NoSuchElementException: 
-Cannot locate an element using By.id: txtUserName
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'HARRY', ip: '192.168.56.1', os.name: 'Windows 8.1', os.arch: 'x86', os.version: '6.3', java.version: '1.8.0_101'
-Driver info: driver.version: unknown
-	at com.gmc.tests.admin.SendWelcomeEmailTest.sendEmail(SendWelcomeEmailTest.java:55)
-
-sendEmail(com.gmc.tests.admin.SendWelcomeEmailTest)  Time elapsed: 5.299 sec  <<< FAILURE!
-org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.id: txtUserName (tried for 5 second(s) with 500 milliseconds interval)
-	at com.gmc.tests.admin.SendWelcomeEmailTest.sendEmail(SendWelcomeEmailTest.java:55)
-Caused by: org.openqa.selenium.NoSuchElementException: 
-Cannot locate an element using By.id: txtUserName
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'HARRY', ip: '192.168.56.1', os.name: 'Windows 8.1', os.arch: 'x86', os.version: '6.3', java.version: '1.8.0_101'
-Driver info: driver.version: unknown
-	at com.gmc.tests.admin.SendWelcomeEmailTest.sendEmail(SendWelcomeEmailTest.java:55)
-
-sendEmail(com.gmc.tests.admin.SendWelcomeEmailTest)  Time elapsed: 5.265 sec  <<< FAILURE!
-org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.id: txtUserName (tried for 5 second(s) with 500 milliseconds interval)
-	at com.gmc.tests.admin.SendWelcomeEmailTest.sendEmail(SendWelcomeEmailTest.java:55)
-Caused by: org.openqa.selenium.NoSuchElementException: 
-Cannot locate an element using By.id: txtUserName
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'HARRY', ip: '192.168.56.1', os.name: 'Windows 8.1', os.arch: 'x86', os.version: '6.3', java.version: '1.8.0_101'
-Driver info: driver.version: unknown
-	at com.gmc.tests.admin.SendWelcomeEmailTest.sendEmail(SendWelcomeEmailTest.java:55)
-
-sendEmail(com.gmc.tests.admin.SendWelcomeEmailTest)  Time elapsed: 5.25 sec  <<< FAILURE!
-org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.id: txtUserName (tried for 5 second(s) with 500 milliseconds interval)
-	at com.gmc.tests.admin.SendWelcomeEmailTest.sendEmail(SendWelcomeEmailTest.java:55)
-Caused by: org.openqa.selenium.NoSuchElementException: 
-Cannot locate an element using By.id: txtUserName
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'HARRY', ip: '192.168.56.1', os.name: 'Windows 8.1', os.arch: 'x86', os.version: '6.3', java.version: '1.8.0_101'
-Driver info: driver.version: unknown
-	at com.gmc.tests.admin.SendWelcomeEmailTest.sendEmail(SendWelcomeEmailTest.java:55)
-
-sendEmail(com.gmc.tests.admin.SendWelcomeEmailTest)  Time elapsed: 5.254 sec  <<< FAILURE!
-org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.id: txtUserName (tried for 5 second(s) with 500 milliseconds interval)
-	at com.gmc.tests.admin.SendWelcomeEmailTest.sendEmail(SendWelcomeEmailTest.java:55)
-Caused by: org.openqa.selenium.NoSuchElementException: 
-Cannot locate an element using By.id: txtUserName
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'HARRY', ip: '192.168.56.1', os.name: 'Windows 8.1', os.arch: 'x86', os.version: '6.3', java.version: '1.8.0_101'
-Driver info: driver.version: unknown
-	at com.gmc.tests.admin.SendWelcomeEmailTest.sendEmail(SendWelcomeEmailTest.java:55)
-
-sendEmail(com.gmc.tests.admin.SendWelcomeEmailTest)  Time elapsed: 5.177 sec  <<< FAILURE!
-org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.id: txtUserName (tried for 5 second(s) with 500 milliseconds interval)
-	at com.gmc.tests.admin.SendWelcomeEmailTest.sendEmail(SendWelcomeEmailTest.java:55)
-Caused by: org.openqa.selenium.NoSuchElementException: 
-Cannot locate an element using By.id: txtUserName
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'HARRY', ip: '192.168.56.1', os.name: 'Windows 8.1', os.arch: 'x86', os.version: '6.3', java.version: '1.8.0_101'
-Driver info: driver.version: unknown
-	at com.gmc.tests.admin.SendWelcomeEmailTest.sendEmail(SendWelcomeEmailTest.java:55)
+	at com.ieasy.tests.PrivateCarTest.testPrivateCar(PrivateCarTest.java:108)
 

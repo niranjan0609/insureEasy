@@ -1,4 +1,4 @@
-package com.gmc.utils;
+package com.ieasy.utils;
 
 import java.io.FileInputStream;
 import java.io.IOException;

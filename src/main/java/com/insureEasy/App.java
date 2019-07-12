@@ -1,4 +1,4 @@
-package com.gmc;
+package com.insureEasy;
 
 /**
  * Hello world!

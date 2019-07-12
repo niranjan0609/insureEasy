@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="18737" started-at="2018-10-30T10:35:17Z" finished-at="2018-10-30T10:35:36Z">
+  <suite name="Default suite" duration-ms="18024" started-at="2019-07-12T09:55:04Z" finished-at="2019-07-12T09:55:22Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="18737" started-at="2018-10-30T10:35:17Z" finished-at="2018-10-30T10:35:36Z">
-      <class name="com.gmc.tests.admin.AdminUpdateDependentsTest">
-        <test-method status="PASS" signature="initializeTestBaseSetup(java.lang.String, java.lang.String, org.testng.ITestContext)[pri:0, instance:com.gmc.tests.admin.AdminUpdateDependentsTest@646db9]" name="initializeTestBaseSetup" is-config="true" duration-ms="14907" started-at="2018-10-30T10:35:17Z" finished-at="2018-10-30T10:35:32Z">
+    <test name="Default test" duration-ms="18024" started-at="2019-07-12T09:55:04Z" finished-at="2019-07-12T09:55:22Z">
+      <class name="com.ieasy.tests.HealthTest">
+        <test-method status="PASS" signature="initializeTestBaseSetup(java.lang.String, java.lang.String, org.testng.ITestContext)[pri:0, instance:com.ieasy.tests.HealthTest@e720b71]" name="initializeTestBaseSetup" is-config="true" duration-ms="6212" started-at="2019-07-12T09:55:04Z" finished-at="2019-07-12T09:55:10Z">
           <params>
             <param index="0">
               <value>
@@ -16,27 +16,68 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[http://dev.isbsindia.in/mmenroll/]]>
+                <![CDATA[https://beta.insureeasy.in/]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[org.testng.TestRunner@d5eb72]]>
+                <![CDATA[org.testng.TestRunner@62679465]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeTestBaseSetup -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.gmc.tests.admin.AdminUpdateDependentsTest@646db9]" name="setUp" is-config="true" duration-ms="2008" started-at="2018-10-30T10:35:32Z" finished-at="2018-10-30T10:35:34Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ieasy.tests.HealthTest@e720b71]" name="setUp" is-config="true" duration-ms="492" started-at="2019-07-12T09:55:10Z" finished-at="2019-07-12T09:55:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="FAIL" signature="searchEmp()[pri:0, instance:com.gmc.tests.admin.AdminUpdateDependentsTest@646db9]" name="searchEmp" duration-ms="1056" started-at="2018-10-30T10:35:34Z" finished-at="2018-10-30T10:35:35Z">
-          <exception class="java.lang.NullPointerException">
+        <test-method status="FAIL" signature="testHealth(com.ieasy.tests.HealthPOJO)[pri:0, instance:com.ieasy.tests.HealthTest@e720b71]" name="testHealth" duration-ms="7158" started-at="2019-07-12T09:55:14Z" data-provider="abhiinsuranceData" finished-at="2019-07-12T09:55:21Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[com.ieasy.tests.HealthPOJO@45cff11c]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="member-list"]/div[4]/div[4]/a/i"}
+  (Session info: chrome=75.0.3770.100)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'NIRANJAN-REDDY', ip: '192.168.200.72', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_201'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 75.0.3770.100, chrome: {chromedriverVersion: 75.0.3770.90 (a6dcaf7e3ec6f..., userDataDir: C:\Users\niranjan.t\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:61598}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: af70752a82d0a6c27dacac7dff76559d
+*** Element info: {Using=xpath, value=//*[@id="member-list"]/div[4]/div[4]/a/i}]]>
+            </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-at com.gmc.tests.admin.AdminUpdateDependentsTest.searchEmp(AdminUpdateDependentsTest.java:52)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="member-list"]/div[4]/div[4]/a/i"}
+  (Session info: chrome=75.0.3770.100)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'NIRANJAN-REDDY', ip: '192.168.200.72', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_201'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 75.0.3770.100, chrome: {chromedriverVersion: 75.0.3770.90 (a6dcaf7e3ec6f..., userDataDir: C:\Users\niranjan.t\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:61598}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: af70752a82d0a6c27dacac7dff76559d
+*** Element info: {Using=xpath, value=//*[@id="member-list"]/div[4]/div[4]/a/i}
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:424)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+at com.ieasy.pageobjects.HealthPage.CloseSonOption(HealthPage.java:59)
+at com.ieasy.tests.HealthTest.testHealth(HealthTest.java:87)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -59,20 +100,20 @@ at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
 at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
 at org.testng.TestNG.runSuites(TestNG.java:1049)
 at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- searchEmp -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.gmc.tests.admin.AdminUpdateDependentsTest@646db9]" name="tearDown" is-config="true" duration-ms="656" started-at="2018-10-30T10:35:35Z" finished-at="2018-10-30T10:35:36Z">
+        </test-method> <!-- testHealth -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ieasy.tests.HealthTest@e720b71]" name="tearDown" is-config="true" duration-ms="636" started-at="2019-07-12T09:55:21Z" finished-at="2019-07-12T09:55:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.gmc.tests.admin.AdminUpdateDependentsTest -->
+      </class> <!-- com.ieasy.tests.HealthTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

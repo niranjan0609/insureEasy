@@ -1,4 +1,4 @@
-package com.gmc.base;
+package com.ieasy.base;
 
 
 import java.util.HashMap;

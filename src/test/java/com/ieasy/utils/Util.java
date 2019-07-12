@@ -1,4 +1,4 @@
-package com.gmc.utils;
+package com.ieasy.utils;
 
 import java.io.File;
 import java.text.SimpleDateFormat;

@@ -1,4 +1,4 @@
-package com.gmc.base;
+package com.ieasy.base;
 
 import java.io.File;
 
@@ -14,7 +14,7 @@ import org.testng.ITestResult;
 
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
-import com.gmc.utils.Util;
+import com.ieasy.utils.Util;
 
 public class TestListener implements ITestListener {
 

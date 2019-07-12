@@ -1,20 +1,20 @@
-package com.gmc.base;
+package com.ieasy.base;
 
+import org.openqa.grid.selenium.node.FirefoxMutator;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.ITestContext;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Parameters;
-
 import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
 
 
 public class TestBase{
 
 	private WebDriver driver;
-	static String driverPath = "D:/drivers/";
+	static String driverPath = "E:/Selenium/InsureEasyAutomation/src/test/java/resources/";
 	
 	public WebDriver getDriver() {
 		return driver;
@@ -70,15 +70,16 @@ public class TestBase{
 	}
 
 	@Parameters({ "browserType", "appURL" })
-	@BeforeTest
-	public void initializeTestBaseSetup(@Optional("chrome") String browserType, @Optional("http://dev.isbsindia.in/mmenroll/") String appURL, ITestContext context) {		try {
+	@BeforeTest(alwaysRun = true)
+	public void initializeTestBaseSetup(@Optional("chrome") String browserType, @Optional("https://beta.insureeasy.in/") String appURL, ITestContext context) {		try {
 		//test.log(Status.INFO, "Opening browser "+browserType);
 		    System.out.println("Intializing browser...." + browserType);
 			driver = setDriver(browserType, appURL);
 			context.setAttribute("driver", driver);
 
 		} catch (Exception e) {
-			System.out.println("Error....." + e.getStackTrace());
+			System.out.println("Error....." );
+			 e.printStackTrace();
 		}
 	}
 	

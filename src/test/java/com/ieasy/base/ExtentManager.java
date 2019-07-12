@@ -1,4 +1,4 @@
-package com.gmc.base;
+package com.ieasy.base;
 
 import java.io.File;
 
@@ -8,7 +8,7 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.ChartLocation;
 import com.aventstack.extentreports.reporter.configuration.Theme;
-import com.gmc.utils.Util;
+import com.ieasy.utils.Util;
 
 
 public class ExtentManager {
