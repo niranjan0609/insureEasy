@@ -36,7 +36,7 @@ public class HealthPage {
 	private By listingDetails = By.cssSelector("#listingBody .health-listing");
 	private By homeBack = By.cssSelector("#healthSearch .filter-header .btn-orange");
 	private By SearchBarLink = By.xpath("");
-	private By SILink = By.xpath("");
+	private By SILink = By.xpath("add");
 	private By ApplySearchLink = By.xpath("");
 	private By addMemb = By.xpath("");
 	private By addSonTxt = By.xpath("");
