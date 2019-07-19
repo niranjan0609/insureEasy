@@ -163,7 +163,7 @@ public class PrivateCarTest extends TestBase {
         privateCarPage.enterManufacturingDate(pojoData.getCarMfgMonth(), pojoData.getCarMfgYear());
         privateCarPage.clickViewQuotes();
         Thread.sleep(3000);
-        privateCarPage.clickUiiccQuote();
+       /* privateCarPage.clickUiiccQuote();
         Thread.sleep(3000);
         privateCarPage.enterEmailOrMobile(pojoData.getEmailorMobile());
         Thread.sleep(3000);
@@ -196,7 +196,7 @@ public class PrivateCarTest extends TestBase {
         Thread.sleep(3000);
         privateCarPage.clickOnGetPoposalQuote();
         Thread.sleep(3000);
-        privateCarPage.clickOnMakePayment();
+        privateCarPage.clickOnMakePayment();*/
         
 
 	}

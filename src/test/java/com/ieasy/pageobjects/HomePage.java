@@ -30,8 +30,8 @@ public class HomePage {
 	}
 	
 	public HealthPage clickHealth() {
-		wait.until(ExpectedConditions.presenceOfElementLocated(pageHeader));
-		driver.findElement(byHealth).click();
+		//wait.until(ExpectedConditions.presenceOfElementLocated(pageHeader));
+  driver.findElement(byHealth).click();
 		return new HealthPage(driver);
 		
 	}

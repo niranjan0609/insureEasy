@@ -1,9 +1,11 @@
 package com.ieasy.base;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.grid.selenium.node.FirefoxMutator;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.ITestContext;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeTest;
@@ -14,7 +16,7 @@ import org.testng.annotations.Parameters;
 public class TestBase{
 
 	private WebDriver driver;
-	static String driverPath = "E:/Selenium/InsureEasyAutomation/src/test/java/resources/";
+	//static String driverPath = "E:/Selenium/InsureEasyAutomation/src/test/java/resources/";
 	
 	public WebDriver getDriver() {
 		return driver;
@@ -41,8 +43,9 @@ public class TestBase{
 
 	private static WebDriver initChromeDriver(String appURL) {
 		System.out.println("Launching google chrome with new profile..");
-		System.setProperty("webdriver.chrome.driver", driverPath
-				+ "chromedriver.exe");
+		/*System.setProperty("webdriver.chrome.driver", driverPath
+				+ "chromedriver.exe");*/
+		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.navigate().to(appURL);
@@ -51,8 +54,9 @@ public class TestBase{
 
 	private static WebDriver initFirefoxDriver(String appURL) {
 		System.out.println("Launching firefox browser..");
-		System.setProperty("webdriver.gecko.driver", driverPath
-				+ "geckodriver.exe");
+		/*System.setProperty("webdriver.gecko.driver", driverPath
+				+ "geckodriver.exe");*/
+		WebDriverManager.firefoxdriver().setup();
 		WebDriver driver = new FirefoxDriver();
 		driver.manage().window().maximize();
 		driver.navigate().to(appURL);
@@ -61,9 +65,9 @@ public class TestBase{
 	
 	private static WebDriver initInternetExplorer(String appURL) {
 		System.out.println("Launching firefox browser..");
-		System.setProperty("webdriver.chrome.driver", driverPath
-				+ "chromedriver.exe");
-		WebDriver driver = new FirefoxDriver();
+		/*System.setProperty("webdriver.chrome.driver", driverPath
+				+ "chromedriver.exe");*/
+		WebDriver driver = new InternetExplorerDriver();
 		driver.manage().window().maximize();
 		driver.navigate().to(appURL);
 		return driver;
@@ -71,7 +75,7 @@ public class TestBase{
 
 	@Parameters({ "browserType", "appURL" })
 	@BeforeTest(alwaysRun = true)
-	public void initializeTestBaseSetup(@Optional("chrome") String browserType, @Optional("https://beta.insureeasy.in/") String appURL, ITestContext context) {		try {
+	public void initializeTestBaseSetup(@Optional("chrome") String browserType, @Optional("https://test.insureeasy.in/") String appURL, ITestContext context) {		try {
 		//test.log(Status.INFO, "Opening browser "+browserType);
 		    System.out.println("Intializing browser...." + browserType);
 			driver = setDriver(browserType, appURL);

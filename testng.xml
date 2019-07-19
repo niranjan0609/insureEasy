@@ -16,9 +16,9 @@
  -->
 <test name="Chrome Tests">
 <parameter name="browserType" value="chrome" />
-	<parameter name="appURL" value="https://beta.insureeasy.in" />
+	<parameter name="appURL" value="https://test.insureeasy.in" />
 		<classes>
-			<class name="com.ieasy.tests.PrivateCarTest" />
+			<class name="com.ieasy.tests.HealthTest" />
 		</classes>
 	</test>
 

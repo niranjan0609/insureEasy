@@ -7,7 +7,7 @@
         <methods>
           <include name="initializeTestBaseSetup"/>
           <include name="setUp"/>
-          <include name="testHealth" invocation-numbers="0"/>
+          <include name="diamondPlanIndividual" invocation-numbers="1"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- com.ieasy.tests.HealthTest -->
