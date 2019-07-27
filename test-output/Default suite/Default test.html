@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>10/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Jul 19 15:54:10 IST 2019</td>
+<td>Started on:</td><td>Sat Jul 27 12:11:03 IST 2019</td>
 </tr>
-<tr><td>Total time:</td><td>41 seconds (41522 ms)</td>
+<tr><td>Total time:</td><td>2007 seconds (2007879 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,11 +75,32 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.ieasy.tests.HealthTest.diamondPlanIndividual()'><b>diamondPlanIndividual</b><br>Test class: com.ieasy.tests.HealthTest<br>Parameters: com.ieasy.tests.HealthPOJO@3c5a54b7</td>
-<td><div><pre>java.lang.AssertionError: The following asserts failed:
-	Sum insured value not correct expected [400000] but found [300000]
-	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:43)
-	at com.ieasy.tests.HealthTest.diamondPlanIndividual(HealthTest.java:186)
+<td title='com.ieasy.tests.Dp1APlan.diamondPlanIndividual()'><b>diamondPlanIndividual</b><br>Test class: com.ieasy.tests.Dp1APlan<br>Parameters: com.ieasy.tests.HealthPOJO@5e840abf</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.dropdown.open ul.dropdown-menu li:first-child&quot;}
+  (Session info: chrome=75.0.3770.142)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;NIRANJAN-REDDY&apos;, ip: &apos;192.168.200.72&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_201&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 75.0.3770.142, chrome: {chromedriverVersion: 75.0.3770.8 (681f24ea911fe7..., userDataDir: C:\Users\niranjan.t\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:52737}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: cc3873233d4655ade3c173bd2ab2db18
+*** Element info: {Using=css selector, value=.dropdown.open ul.dropdown-menu li:first-child}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:416)
+	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+	at com.ieasy.pageobjects.HealthPage.selectFirstPinValue(HealthPage.java:81)
+	at com.ieasy.tests.Dp1APlan.diamondPlanIndividual(Dp1APlan.java:169)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -105,11 +126,32 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace2086945474", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2086945474'><pre>java.lang.AssertionError: The following asserts failed:
-	Sum insured value not correct expected [400000] but found [300000]
-	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:43)
-	at com.ieasy.tests.HealthTest.diamondPlanIndividual(HealthTest.java:186)
+</pre></div><a href='#' onClick='toggleBox("stack-trace602161799", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace602161799'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.dropdown.open ul.dropdown-menu li:first-child&quot;}
+  (Session info: chrome=75.0.3770.142)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;NIRANJAN-REDDY&apos;, ip: &apos;192.168.200.72&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_201&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 75.0.3770.142, chrome: {chromedriverVersion: 75.0.3770.8 (681f24ea911fe7..., userDataDir: C:\Users\niranjan.t\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:52737}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: cc3873233d4655ade3c173bd2ab2db18
+*** Element info: {Using=css selector, value=.dropdown.open ul.dropdown-menu li:first-child}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:416)
+	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+	at com.ieasy.pageobjects.HealthPage.selectFirstPinValue(HealthPage.java:81)
+	at com.ieasy.tests.Dp1APlan.diamondPlanIndividual(Dp1APlan.java:169)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -136,8 +178,8 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>15</td>
-<td>com.ieasy.tests.HealthTest@4a87761d</td></tr>
+<td>8</td>
+<td>com.ieasy.tests.Dp1APlan@5f683daf</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -147,10 +189,55 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.ieasy.tests.HealthTest.diamondPlanIndividual()'><b>diamondPlanIndividual</b><br>Test class: com.ieasy.tests.HealthTest<br>Parameters: com.ieasy.tests.HealthPOJO@4c4d362a</td>
+<td title='com.ieasy.tests.Dp1APlan.diamondPlanIndividual()'><b>diamondPlanIndividual</b><br>Test class: com.ieasy.tests.Dp1APlan<br>Parameters: com.ieasy.tests.HealthPOJO@1eaf1e62</td>
 <td></td>
-<td>15</td>
-<td>com.ieasy.tests.HealthTest@4a87761d</td></tr>
+<td>221</td>
+<td>com.ieasy.tests.Dp1APlan@5f683daf</td></tr>
+<tr>
+<td title='com.ieasy.tests.Dp1APlan.diamondPlanIndividual()'><b>diamondPlanIndividual</b><br>Test class: com.ieasy.tests.Dp1APlan<br>Parameters: com.ieasy.tests.HealthPOJO@2f8c4fae</td>
+<td></td>
+<td>218</td>
+<td>com.ieasy.tests.Dp1APlan@5f683daf</td></tr>
+<tr>
+<td title='com.ieasy.tests.Dp1APlan.diamondPlanIndividual()'><b>diamondPlanIndividual</b><br>Test class: com.ieasy.tests.Dp1APlan<br>Parameters: com.ieasy.tests.HealthPOJO@35f22eef</td>
+<td></td>
+<td>218</td>
+<td>com.ieasy.tests.Dp1APlan@5f683daf</td></tr>
+<tr>
+<td title='com.ieasy.tests.Dp1APlan.diamondPlanIndividual()'><b>diamondPlanIndividual</b><br>Test class: com.ieasy.tests.Dp1APlan<br>Parameters: com.ieasy.tests.HealthPOJO@4791d904</td>
+<td></td>
+<td>219</td>
+<td>com.ieasy.tests.Dp1APlan@5f683daf</td></tr>
+<tr>
+<td title='com.ieasy.tests.Dp1APlan.diamondPlanIndividual()'><b>diamondPlanIndividual</b><br>Test class: com.ieasy.tests.Dp1APlan<br>Parameters: com.ieasy.tests.HealthPOJO@474aeac5</td>
+<td></td>
+<td>219</td>
+<td>com.ieasy.tests.Dp1APlan@5f683daf</td></tr>
+<tr>
+<td title='com.ieasy.tests.Dp1APlan.diamondPlanIndividual()'><b>diamondPlanIndividual</b><br>Test class: com.ieasy.tests.Dp1APlan<br>Parameters: com.ieasy.tests.HealthPOJO@3e8a1137</td>
+<td></td>
+<td>219</td>
+<td>com.ieasy.tests.Dp1APlan@5f683daf</td></tr>
+<tr>
+<td title='com.ieasy.tests.Dp1APlan.diamondPlanIndividual()'><b>diamondPlanIndividual</b><br>Test class: com.ieasy.tests.Dp1APlan<br>Parameters: com.ieasy.tests.HealthPOJO@d750a</td>
+<td></td>
+<td>219</td>
+<td>com.ieasy.tests.Dp1APlan@5f683daf</td></tr>
+<tr>
+<td title='com.ieasy.tests.Dp1APlan.diamondPlanIndividual()'><b>diamondPlanIndividual</b><br>Test class: com.ieasy.tests.Dp1APlan<br>Parameters: com.ieasy.tests.HealthPOJO@7bd203ce</td>
+<td></td>
+<td>143</td>
+<td>com.ieasy.tests.Dp1APlan@5f683daf</td></tr>
+<tr>
+<td title='com.ieasy.tests.Dp1APlan.diamondPlanIndividual()'><b>diamondPlanIndividual</b><br>Test class: com.ieasy.tests.Dp1APlan<br>Parameters: com.ieasy.tests.HealthPOJO@1a8eed09</td>
+<td></td>
+<td>143</td>
+<td>com.ieasy.tests.Dp1APlan@5f683daf</td></tr>
+<tr>
+<td title='com.ieasy.tests.Dp1APlan.diamondPlanIndividual()'><b>diamondPlanIndividual</b><br>Test class: com.ieasy.tests.Dp1APlan<br>Parameters: com.ieasy.tests.HealthPOJO@2a056ee6</td>
+<td></td>
+<td>143</td>
+<td>com.ieasy.tests.Dp1APlan@5f683daf</td></tr>
 </table><p>
 </body>
 </html>

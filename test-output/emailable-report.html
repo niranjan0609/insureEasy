@@ -9,14 +9,35 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="7">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">1</td><td class="num">0</td><td class="num attn">1</td><td class="num">41,522</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">10</td><td class="num">0</td><td class="num attn">1</td><td class="num">2,007,879</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.ieasy.tests.HealthTest</td><td><a href="#m0">diamondPlanIndividual</a></td><td rowspan="1">1563531875571</td><td rowspan="1">15391</td></tr><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.ieasy.tests.HealthTest</td><td><a href="#m1">diamondPlanIndividual</a></td><td rowspan="1">1563531860137</td><td rowspan="1">15431</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.ieasy.tests.Dp1APlan</td><td><a href="#m0">diamondPlanIndividual</a></td><td rowspan="1">1564209677141</td><td rowspan="1">8481</td></tr><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="10">com.ieasy.tests.Dp1APlan</td><td><a href="#m1">diamondPlanIndividual</a></td><td rowspan="10">1564211015387</td><td rowspan="10">219383</td></tr><tr class="passedeven"><td><a href="#m2">diamondPlanIndividual</a></td></tr><tr class="passedeven"><td><a href="#m3">diamondPlanIndividual</a></td></tr><tr class="passedeven"><td><a href="#m4">diamondPlanIndividual</a></td></tr><tr class="passedeven"><td><a href="#m5">diamondPlanIndividual</a></td></tr><tr class="passedeven"><td><a href="#m6">diamondPlanIndividual</a></td></tr><tr class="passedeven"><td><a href="#m7">diamondPlanIndividual</a></td></tr><tr class="passedeven"><td><a href="#m8">diamondPlanIndividual</a></td></tr><tr class="passedeven"><td><a href="#m9">diamondPlanIndividual</a></td></tr><tr class="passedeven"><td><a href="#m10">diamondPlanIndividual</a></td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">com.ieasy.tests.HealthTest#diamondPlanIndividual</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>com.ieasy.tests.HealthPOJO@3c5a54b7</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: The following asserts failed:
-	Sum insured value not correct expected [400000] but found [300000]
-	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:43)
-	at com.ieasy.tests.HealthTest.diamondPlanIndividual(HealthTest.java:186)
+<h2>Default test</h2><h3 id="m0">com.ieasy.tests.Dp1APlan#diamondPlanIndividual</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>com.ieasy.tests.HealthPOJO@5e840abf</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.dropdown.open ul.dropdown-menu li:first-child&quot;}
+  (Session info: chrome=75.0.3770.142)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;NIRANJAN-REDDY&apos;, ip: &apos;192.168.200.72&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_201&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 75.0.3770.142, chrome: {chromedriverVersion: 75.0.3770.8 (681f24ea911fe7..., userDataDir: C:\Users\niranjan.t\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:52737}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: cc3873233d4655ade3c173bd2ab2db18
+*** Element info: {Using=css selector, value=.dropdown.open ul.dropdown-menu li:first-child}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:416)
+	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+	at com.ieasy.pageobjects.HealthPage.selectFirstPinValue(HealthPage.java:81)
+	at com.ieasy.tests.Dp1APlan.diamondPlanIndividual(Dp1APlan.java:169)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -43,6 +64,15 @@
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">com.ieasy.tests.HealthTest#diamondPlanIndividual</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>com.ieasy.tests.HealthPOJO@4c4d362a</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.ieasy.tests.Dp1APlan#diamondPlanIndividual</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>com.ieasy.tests.HealthPOJO@d750a</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.ieasy.tests.Dp1APlan#diamondPlanIndividual</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>com.ieasy.tests.HealthPOJO@3e8a1137</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.ieasy.tests.Dp1APlan#diamondPlanIndividual</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>com.ieasy.tests.HealthPOJO@474aeac5</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">com.ieasy.tests.Dp1APlan#diamondPlanIndividual</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>com.ieasy.tests.HealthPOJO@7bd203ce</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">com.ieasy.tests.Dp1APlan#diamondPlanIndividual</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>com.ieasy.tests.HealthPOJO@1eaf1e62</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">com.ieasy.tests.Dp1APlan#diamondPlanIndividual</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>com.ieasy.tests.HealthPOJO@35f22eef</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">com.ieasy.tests.Dp1APlan#diamondPlanIndividual</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>com.ieasy.tests.HealthPOJO@4791d904</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">com.ieasy.tests.Dp1APlan#diamondPlanIndividual</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>com.ieasy.tests.HealthPOJO@1a8eed09</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">com.ieasy.tests.Dp1APlan#diamondPlanIndividual</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>com.ieasy.tests.HealthPOJO@2a056ee6</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m10">com.ieasy.tests.Dp1APlan#diamondPlanIndividual</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>com.ieasy.tests.HealthPOJO@2f8c4fae</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

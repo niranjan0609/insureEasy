@@ -3,14 +3,16 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.ieasy.tests.HealthTest">
+      <class name="com.ieasy.tests.Dp1APlan">
         <methods>
           <include name="initializeTestBaseSetup"/>
+          <include name="testSetUp"/>
           <include name="setUp"/>
-          <include name="diamondPlanIndividual" invocation-numbers="1"/>
+          <include name="diamondPlanIndividual" invocation-numbers="0"/>
+          <include name="testTearDown"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- com.ieasy.tests.HealthTest -->
+      </class> <!-- com.ieasy.tests.Dp1APlan -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

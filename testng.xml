@@ -10,7 +10,7 @@
 	<parameter name="browserType" value="firefox" />
 		<parameter name="appURL" value="http://dev.isbsindia.in/mmenroll/" />
 		<classes>
-			<class name="com.gmc.tests.admin.AdminLoginTest" />
+			<class name="" />
 		</classes>
 	</test>
  -->
@@ -18,7 +18,17 @@
 <parameter name="browserType" value="chrome" />
 	<parameter name="appURL" value="https://test.insureeasy.in" />
 		<classes>
-			<class name="com.ieasy.tests.HealthTest" />
+		    <class name="com.ieasy.tests.Dp1APlan" />
+			<class name="com.ieasy.tests.Dp2APlan" />
+			<class name="com.ieasy.tests.Dp1A1C" />
+			<class name="com.ieasy.tests.Dp1A2C" />
+			<class name="com.ieasy.tests.Dp1A3C" />
+			<class name="com.ieasy.tests.Dp1A4C" />
+			<class name="com.ieasy.tests.Dp2A1C" />
+			<class name="com.ieasy.tests.Dp2A2C" />
+			<class name="com.ieasy.tests.Dp2A3C" />
+			<class name="com.ieasy.tests.Dp1A4C" />	
+			
 		</classes>
 	</test>
 

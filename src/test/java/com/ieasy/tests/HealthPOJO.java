@@ -35,6 +35,11 @@ public class HealthPOJO {
 	private String prem100Lac; 
 	private String prem150Lac;
 	private String prem200Lac;
+	private String wifeAge; 
+	private String daugAge;
+	private String sonAge;
+	private String daug2Age;
+	private String son2Age;
 	 
 	
 	
@@ -116,7 +121,7 @@ public class HealthPOJO {
 		this.sI5Lac =sI5Lac;
 	}
 
-public String get5LacSumInsured() {
+	public String get5LacSumInsured() {
 		
 		return sI5Lac;
 	}
@@ -126,7 +131,7 @@ public String get5LacSumInsured() {
 		this.sI50Lac =sI50Lac;
 	}
 	
-public String get50LacSumInsured() {
+	public String get50LacSumInsured() {
 		
 		return sI50Lac;
 	}
@@ -147,7 +152,7 @@ public String get50LacSumInsured() {
 	}
 
 	
-public String get200LacSumInsured() {
+	public String get200LacSumInsured() {
 		
 		return sI200Lac;
 	}
@@ -167,7 +172,7 @@ public String get200LacSumInsured() {
 	}
 	
 
-public String get150LacSumInsured() {
+	public String get150LacSumInsured() {
 		
 		return sI150Lac;
 	}
@@ -186,7 +191,7 @@ public String get150LacSumInsured() {
 		this.sI100Lac =sI100Lac;
 	}
 
-public String get100LacSumInsured() {
+	public String get100LacSumInsured() {
 		
 		return sI100Lac;
 	}
@@ -204,7 +209,7 @@ public String get100LacSumInsured() {
 	
 		this.sI75Lac =sI75Lac;
 	}
-public String get75LacSumInsured() {
+	public String get75LacSumInsured() {
 		
 		return sI75Lac;
 	}
@@ -230,7 +235,7 @@ public String get75LacSumInsured() {
 		this.sI40Lac =sI40Lac;
 	}
 
-public String get40LacSumInsured() {
+	public String get40LacSumInsured() {
 		
 		return sI40Lac;
 	}
@@ -248,7 +253,7 @@ public String get40LacSumInsured() {
 		this.sI30Lac =sI30Lac;
 	}
 
-public String get30LacSumInsured() {
+	public String get30LacSumInsured() {
 		
 		return sI30Lac;
 	}
@@ -267,7 +272,7 @@ public String get30LacSumInsured() {
 		this.sI25Lac =sI25Lac;
 	}
 	
-public String get25LacSumInsured() {
+	public String get25LacSumInsured() {
 		
 		return sI25Lac;
 	}
@@ -286,14 +291,14 @@ public String get25LacSumInsured() {
 		this.sI20Lac =sI20Lac;
 	}
 
-public String get20LacSumInsured() {
+	public String get20LacSumInsured() {
 		
 		return sI20Lac;
 	}
 
 	public void set15LacPremium(String prem15Lac) {
 		
-		this.prem150Lac = prem15Lac;
+		this.prem15Lac = prem15Lac;
 	}
 
 	public String get15LacPremium() {
@@ -305,7 +310,7 @@ public String get20LacSumInsured() {
 		this.sI15Lac =sI15Lac;
 	}
 	
-public String get15LacSumInsured() {
+	public String get15LacSumInsured() {
 		
 		return sI15Lac;
 	}
@@ -324,7 +329,7 @@ public String get15LacSumInsured() {
 		this.sI10Lac =sI10Lac;
 	}
 	
-public String get10LacSumInsured() {
+	public String get10LacSumInsured() {
 		
 		return sI10Lac;
 	}
@@ -342,17 +347,63 @@ public String get10LacSumInsured() {
 		this.sI7Lac =sI7Lac;
 	}
 
-public String get7LacSumInsured() {
+   public String get7LacSumInsured() {
 		
 		return sI7Lac;
 	}
-	public void set5LacPremium(String prem7Lac) {
+	public void set5LacPremium(String prem5Lac) {
 		
-		this.prem7Lac = prem7Lac;
+		this.prem5Lac = prem5Lac;
 	}
 
 	public String get5LacPremium() {
 		return prem5Lac;
 	}
+
+		public String getWifeAge() {
+		
+		return wifeAge;
+	}
+
+	public void setWifeAge(String wifeAge) {
+		// TODO Auto-generated method stub
+		this.wifeAge = wifeAge  ;
+
+	}
+
+	public void setDaughterAge(String daugAge) {
+		// TODO Auto-generated method stub
+		this.daugAge = daugAge;
+	}
 	
+	public String getDaughterAge() {
+		return daugAge;
+	}
+
+	public void setSonAge(String sonAge) {
+		// TODO Auto-generated method stub
+		this.sonAge = sonAge;
+	}
+	
+	public String getSonAge() {
+		return sonAge;
+	}
+
+	public void setDaughter2Age(String daug2Age) {
+		// TODO Auto-generated method stub
+		this.daug2Age = daug2Age; 
+	}
+	
+	public String getDaughter2Age() {
+		return daug2Age;
+	}
+
+	public void setSon2Age(String son2Age) {
+		// TODO Auto-generated method stub
+		this.son2Age = son2Age;
+	}
+	
+	public String getSon2Age() {
+		return son2Age;
+	}
 }

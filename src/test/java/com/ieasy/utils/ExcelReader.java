@@ -61,9 +61,11 @@ public class ExcelReader {
 			if (cell.getCellType() == CellType.STRING)
 				return cell.getStringCellValue();
 			else if (cell.getCellType() == CellType.NUMERIC || cell.getCellType() == CellType.FORMULA) {
+				
 				DataFormatter dformatter = new DataFormatter();
 				String cellValue = dformatter.formatCellValue(cell);
-				//String cellValue = String.valueOf(cell.getNumericCellValue());
+				System.out.println("Reading from numeric cell...");
+				//String cellValue = String.valueOf(cell.getStringCellValue());
 				if (HSSFDateUtil.isCellDateFormatted(cell)) {
 					DateFormat df = new SimpleDateFormat("dd/MM/yy");
 					Date date = cell.getDateCellValue();

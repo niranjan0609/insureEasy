@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="2" passed="1">
+<testng-results skipped="0" failed="1" ignored="0" total="11" passed="10">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="41522" started-at="2019-07-19T10:24:10Z" finished-at="2019-07-19T10:24:51Z">
+  <suite name="Default suite" duration-ms="2007879" started-at="2019-07-27T06:41:03Z" finished-at="2019-07-27T07:14:31Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="41522" started-at="2019-07-19T10:24:10Z" finished-at="2019-07-19T10:24:51Z">
-      <class name="com.ieasy.tests.HealthTest">
-        <test-method status="PASS" signature="initializeTestBaseSetup(java.lang.String, java.lang.String, org.testng.ITestContext)[pri:0, instance:com.ieasy.tests.HealthTest@4a87761d]" name="initializeTestBaseSetup" is-config="true" duration-ms="9018" started-at="2019-07-19T10:24:10Z" finished-at="2019-07-19T10:24:19Z">
+    <test name="Default test" duration-ms="2007879" started-at="2019-07-27T06:41:03Z" finished-at="2019-07-27T07:14:31Z">
+      <class name="com.ieasy.tests.Dp1APlan">
+        <test-method status="PASS" signature="initializeTestBaseSetup(java.lang.String, java.lang.String, org.testng.ITestContext)[pri:0, instance:com.ieasy.tests.Dp1APlan@5f683daf]" name="initializeTestBaseSetup" is-config="true" duration-ms="6841" started-at="2019-07-27T06:41:03Z" finished-at="2019-07-27T06:41:10Z">
           <params>
             <param index="0">
               <value>
@@ -21,46 +21,67 @@
             </param>
             <param index="2">
               <value>
-                <![CDATA[org.testng.TestRunner@16c8b7bd]]>
+                <![CDATA[org.testng.TestRunner@17da6cae]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeTestBaseSetup -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ieasy.tests.HealthTest@4a87761d]" name="setUp" is-config="true" duration-ms="482" started-at="2019-07-19T10:24:19Z" finished-at="2019-07-19T10:24:19Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.ieasy.tests.Dp1APlan@5f683daf]" name="setUp" is-config="true" duration-ms="521" started-at="2019-07-27T06:41:10Z" finished-at="2019-07-27T06:41:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="diamondPlanIndividual(com.ieasy.tests.HealthPOJO)[pri:0, instance:com.ieasy.tests.HealthTest@4a87761d]" name="diamondPlanIndividual" duration-ms="15431" started-at="2019-07-19T10:24:20Z" data-provider="abhiinsuranceData" finished-at="2019-07-19T10:24:35Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[com.ieasy.tests.HealthPOJO@4c4d362a]]>
-              </value>
-            </param>
-          </params>
+        <test-method status="PASS" signature="testSetUp()[pri:0, instance:com.ieasy.tests.Dp1APlan@5f683daf]" name="testSetUp" is-config="true" duration-ms="5323" started-at="2019-07-27T06:41:11Z" finished-at="2019-07-27T06:41:17Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- diamondPlanIndividual -->
-        <test-method status="FAIL" signature="diamondPlanIndividual(com.ieasy.tests.HealthPOJO)[pri:0, instance:com.ieasy.tests.HealthTest@4a87761d]" name="diamondPlanIndividual" duration-ms="15391" started-at="2019-07-19T10:24:35Z" data-provider="abhiinsuranceData" finished-at="2019-07-19T10:24:50Z">
+        </test-method> <!-- testSetUp -->
+        <test-method status="FAIL" signature="diamondPlanIndividual(com.ieasy.tests.HealthPOJO)[pri:0, instance:com.ieasy.tests.Dp1APlan@5f683daf]" name="diamondPlanIndividual" duration-ms="8481" started-at="2019-07-27T06:41:17Z" data-provider="abhiinsuranceData" finished-at="2019-07-27T06:41:25Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[com.ieasy.tests.HealthPOJO@3c5a54b7]]>
+                <![CDATA[com.ieasy.tests.HealthPOJO@5e840abf]]>
               </value>
             </param>
           </params>
-          <exception class="java.lang.AssertionError">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[The following asserts failed:
-Sum insured value not correct expected [400000] but found [300000]]]>
+              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":".dropdown.open ul.dropdown-menu li:first-child"}
+  (Session info: chrome=75.0.3770.142)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'NIRANJAN-REDDY', ip: '192.168.200.72', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_201'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 75.0.3770.142, chrome: {chromedriverVersion: 75.0.3770.8 (681f24ea911fe7..., userDataDir: C:\Users\niranjan.t\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:52737}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: cc3873233d4655ade3c173bd2ab2db18
+*** Element info: {Using=css selector, value=.dropdown.open ul.dropdown-menu li:first-child}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: The following asserts failed:
-Sum insured value not correct expected [400000] but found [300000]
-at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:43)
-at com.ieasy.tests.HealthTest.diamondPlanIndividual(HealthTest.java:186)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".dropdown.open ul.dropdown-menu li:first-child"}
+  (Session info: chrome=75.0.3770.142)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'NIRANJAN-REDDY', ip: '192.168.200.72', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_201'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 75.0.3770.142, chrome: {chromedriverVersion: 75.0.3770.8 (681f24ea911fe7..., userDataDir: C:\Users\niranjan.t\AppData...}, goog:chromeOptions: {debuggerAddress: localhost:52737}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: cc3873233d4655ade3c173bd2ab2db18
+*** Element info: {Using=css selector, value=.dropdown.open ul.dropdown-menu li:first-child}
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:416)
+at org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+at com.ieasy.pageobjects.HealthPage.selectFirstPinValue(HealthPage.java:81)
+at com.ieasy.tests.Dp1APlan.diamondPlanIndividual(Dp1APlan.java:169)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -88,15 +109,209 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- diamondPlanIndividual -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ieasy.tests.HealthTest@4a87761d]" name="tearDown" is-config="true" duration-ms="653" started-at="2019-07-19T10:24:50Z" finished-at="2019-07-19T10:24:51Z">
+        <test-method status="PASS" signature="testTearDown()[pri:0, instance:com.ieasy.tests.Dp1APlan@5f683daf]" name="testTearDown" is-config="true" duration-ms="529" started-at="2019-07-27T06:41:25Z" finished-at="2019-07-27T06:41:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTearDown -->
+        <test-method status="PASS" signature="testSetUp()[pri:0, instance:com.ieasy.tests.Dp1APlan@5f683daf]" name="testSetUp" is-config="true" duration-ms="5301" started-at="2019-07-27T06:41:26Z" finished-at="2019-07-27T06:41:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetUp -->
+        <test-method status="PASS" signature="diamondPlanIndividual(com.ieasy.tests.HealthPOJO)[pri:0, instance:com.ieasy.tests.Dp1APlan@5f683daf]" name="diamondPlanIndividual" duration-ms="221898" started-at="2019-07-27T06:41:31Z" data-provider="abhiinsuranceData" finished-at="2019-07-27T06:45:13Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[com.ieasy.tests.HealthPOJO@1eaf1e62]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- diamondPlanIndividual -->
+        <test-method status="PASS" signature="testTearDown()[pri:0, instance:com.ieasy.tests.Dp1APlan@5f683daf]" name="testTearDown" is-config="true" duration-ms="861" started-at="2019-07-27T06:45:13Z" finished-at="2019-07-27T06:45:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTearDown -->
+        <test-method status="PASS" signature="testSetUp()[pri:0, instance:com.ieasy.tests.Dp1APlan@5f683daf]" name="testSetUp" is-config="true" duration-ms="254" started-at="2019-07-27T06:45:14Z" finished-at="2019-07-27T06:45:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetUp -->
+        <test-method status="PASS" signature="diamondPlanIndividual(com.ieasy.tests.HealthPOJO)[pri:0, instance:com.ieasy.tests.Dp1APlan@5f683daf]" name="diamondPlanIndividual" duration-ms="218982" started-at="2019-07-27T06:45:14Z" data-provider="abhiinsuranceData" finished-at="2019-07-27T06:48:53Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[com.ieasy.tests.HealthPOJO@2f8c4fae]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- diamondPlanIndividual -->
+        <test-method status="PASS" signature="testTearDown()[pri:0, instance:com.ieasy.tests.Dp1APlan@5f683daf]" name="testTearDown" is-config="true" duration-ms="927" started-at="2019-07-27T06:48:53Z" finished-at="2019-07-27T06:48:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTearDown -->
+        <test-method status="PASS" signature="testSetUp()[pri:0, instance:com.ieasy.tests.Dp1APlan@5f683daf]" name="testSetUp" is-config="true" duration-ms="237" started-at="2019-07-27T06:48:54Z" finished-at="2019-07-27T06:48:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetUp -->
+        <test-method status="PASS" signature="diamondPlanIndividual(com.ieasy.tests.HealthPOJO)[pri:0, instance:com.ieasy.tests.Dp1APlan@5f683daf]" name="diamondPlanIndividual" duration-ms="218822" started-at="2019-07-27T06:48:54Z" data-provider="abhiinsuranceData" finished-at="2019-07-27T06:52:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[com.ieasy.tests.HealthPOJO@35f22eef]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- diamondPlanIndividual -->
+        <test-method status="PASS" signature="testTearDown()[pri:0, instance:com.ieasy.tests.Dp1APlan@5f683daf]" name="testTearDown" is-config="true" duration-ms="793" started-at="2019-07-27T06:52:33Z" finished-at="2019-07-27T06:52:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTearDown -->
+        <test-method status="PASS" signature="testSetUp()[pri:0, instance:com.ieasy.tests.Dp1APlan@5f683daf]" name="testSetUp" is-config="true" duration-ms="237" started-at="2019-07-27T06:52:34Z" finished-at="2019-07-27T06:52:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetUp -->
+        <test-method status="PASS" signature="diamondPlanIndividual(com.ieasy.tests.HealthPOJO)[pri:0, instance:com.ieasy.tests.Dp1APlan@5f683daf]" name="diamondPlanIndividual" duration-ms="219054" started-at="2019-07-27T06:52:34Z" data-provider="abhiinsuranceData" finished-at="2019-07-27T06:56:13Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[com.ieasy.tests.HealthPOJO@4791d904]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- diamondPlanIndividual -->
+        <test-method status="PASS" signature="testTearDown()[pri:0, instance:com.ieasy.tests.Dp1APlan@5f683daf]" name="testTearDown" is-config="true" duration-ms="855" started-at="2019-07-27T06:56:13Z" finished-at="2019-07-27T06:56:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTearDown -->
+        <test-method status="PASS" signature="testSetUp()[pri:0, instance:com.ieasy.tests.Dp1APlan@5f683daf]" name="testSetUp" is-config="true" duration-ms="232" started-at="2019-07-27T06:56:14Z" finished-at="2019-07-27T06:56:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetUp -->
+        <test-method status="PASS" signature="diamondPlanIndividual(com.ieasy.tests.HealthPOJO)[pri:0, instance:com.ieasy.tests.Dp1APlan@5f683daf]" name="diamondPlanIndividual" duration-ms="219670" started-at="2019-07-27T06:56:14Z" data-provider="abhiinsuranceData" finished-at="2019-07-27T06:59:54Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[com.ieasy.tests.HealthPOJO@474aeac5]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- diamondPlanIndividual -->
+        <test-method status="PASS" signature="testTearDown()[pri:0, instance:com.ieasy.tests.Dp1APlan@5f683daf]" name="testTearDown" is-config="true" duration-ms="816" started-at="2019-07-27T06:59:54Z" finished-at="2019-07-27T06:59:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTearDown -->
+        <test-method status="PASS" signature="testSetUp()[pri:0, instance:com.ieasy.tests.Dp1APlan@5f683daf]" name="testSetUp" is-config="true" duration-ms="235" started-at="2019-07-27T06:59:55Z" finished-at="2019-07-27T06:59:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetUp -->
+        <test-method status="PASS" signature="diamondPlanIndividual(com.ieasy.tests.HealthPOJO)[pri:0, instance:com.ieasy.tests.Dp1APlan@5f683daf]" name="diamondPlanIndividual" duration-ms="219026" started-at="2019-07-27T06:59:55Z" data-provider="abhiinsuranceData" finished-at="2019-07-27T07:03:34Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[com.ieasy.tests.HealthPOJO@3e8a1137]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- diamondPlanIndividual -->
+        <test-method status="PASS" signature="testTearDown()[pri:0, instance:com.ieasy.tests.Dp1APlan@5f683daf]" name="testTearDown" is-config="true" duration-ms="789" started-at="2019-07-27T07:03:34Z" finished-at="2019-07-27T07:03:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTearDown -->
+        <test-method status="PASS" signature="testSetUp()[pri:0, instance:com.ieasy.tests.Dp1APlan@5f683daf]" name="testSetUp" is-config="true" duration-ms="234" started-at="2019-07-27T07:03:35Z" finished-at="2019-07-27T07:03:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetUp -->
+        <test-method status="PASS" signature="diamondPlanIndividual(com.ieasy.tests.HealthPOJO)[pri:0, instance:com.ieasy.tests.Dp1APlan@5f683daf]" name="diamondPlanIndividual" duration-ms="219383" started-at="2019-07-27T07:03:35Z" data-provider="abhiinsuranceData" finished-at="2019-07-27T07:07:14Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[com.ieasy.tests.HealthPOJO@d750a]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- diamondPlanIndividual -->
+        <test-method status="PASS" signature="testTearDown()[pri:0, instance:com.ieasy.tests.Dp1APlan@5f683daf]" name="testTearDown" is-config="true" duration-ms="799" started-at="2019-07-27T07:07:14Z" finished-at="2019-07-27T07:07:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTearDown -->
+        <test-method status="PASS" signature="testSetUp()[pri:0, instance:com.ieasy.tests.Dp1APlan@5f683daf]" name="testSetUp" is-config="true" duration-ms="241" started-at="2019-07-27T07:07:15Z" finished-at="2019-07-27T07:07:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetUp -->
+        <test-method status="PASS" signature="diamondPlanIndividual(com.ieasy.tests.HealthPOJO)[pri:0, instance:com.ieasy.tests.Dp1APlan@5f683daf]" name="diamondPlanIndividual" duration-ms="143921" started-at="2019-07-27T07:07:15Z" data-provider="abhiinsuranceData" finished-at="2019-07-27T07:09:39Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[com.ieasy.tests.HealthPOJO@7bd203ce]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- diamondPlanIndividual -->
+        <test-method status="PASS" signature="testTearDown()[pri:0, instance:com.ieasy.tests.Dp1APlan@5f683daf]" name="testTearDown" is-config="true" duration-ms="856" started-at="2019-07-27T07:09:39Z" finished-at="2019-07-27T07:09:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTearDown -->
+        <test-method status="PASS" signature="testSetUp()[pri:0, instance:com.ieasy.tests.Dp1APlan@5f683daf]" name="testSetUp" is-config="true" duration-ms="237" started-at="2019-07-27T07:09:40Z" finished-at="2019-07-27T07:09:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetUp -->
+        <test-method status="PASS" signature="diamondPlanIndividual(com.ieasy.tests.HealthPOJO)[pri:0, instance:com.ieasy.tests.Dp1APlan@5f683daf]" name="diamondPlanIndividual" duration-ms="143996" started-at="2019-07-27T07:09:40Z" data-provider="abhiinsuranceData" finished-at="2019-07-27T07:12:04Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[com.ieasy.tests.HealthPOJO@1a8eed09]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- diamondPlanIndividual -->
+        <test-method status="PASS" signature="testTearDown()[pri:0, instance:com.ieasy.tests.Dp1APlan@5f683daf]" name="testTearDown" is-config="true" duration-ms="831" started-at="2019-07-27T07:12:04Z" finished-at="2019-07-27T07:12:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTearDown -->
+        <test-method status="PASS" signature="testSetUp()[pri:0, instance:com.ieasy.tests.Dp1APlan@5f683daf]" name="testSetUp" is-config="true" duration-ms="237" started-at="2019-07-27T07:12:05Z" finished-at="2019-07-27T07:12:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetUp -->
+        <test-method status="PASS" signature="diamondPlanIndividual(com.ieasy.tests.HealthPOJO)[pri:0, instance:com.ieasy.tests.Dp1APlan@5f683daf]" name="diamondPlanIndividual" duration-ms="143682" started-at="2019-07-27T07:12:05Z" data-provider="abhiinsuranceData" finished-at="2019-07-27T07:14:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[com.ieasy.tests.HealthPOJO@2a056ee6]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- diamondPlanIndividual -->
+        <test-method status="PASS" signature="testTearDown()[pri:0, instance:com.ieasy.tests.Dp1APlan@5f683daf]" name="testTearDown" is-config="true" duration-ms="1062" started-at="2019-07-27T07:14:29Z" finished-at="2019-07-27T07:14:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testTearDown -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ieasy.tests.Dp1APlan@5f683daf]" name="tearDown" is-config="true" duration-ms="667" started-at="2019-07-27T07:14:30Z" finished-at="2019-07-27T07:14:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.ieasy.tests.HealthTest -->
+      </class> <!-- com.ieasy.tests.Dp1APlan -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
