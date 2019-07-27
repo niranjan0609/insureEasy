@@ -2,10 +2,9 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="Admin test suite" verbose="1" >
 
-<!-- <listeners>
-       <listener class-name="com.gmc.base.TestListener"/>
+ <listeners>
+       <listener class-name="com.ieasy.base.TestListener"/>
   </listeners>
- -->
 	<!-- <test name="firefox Tests">
 	<parameter name="browserType" value="firefox" />
 		<parameter name="appURL" value="http://dev.isbsindia.in/mmenroll/" />
@@ -27,7 +26,7 @@
 			<class name="com.ieasy.tests.Dp2A1C" />
 			<class name="com.ieasy.tests.Dp2A2C" />
 			<class name="com.ieasy.tests.Dp2A3C" />
-			<class name="com.ieasy.tests.Dp1A4C" />	
+			<class name="com.ieasy.tests.Dp1A4C" />
 			
 		</classes>
 	</test>

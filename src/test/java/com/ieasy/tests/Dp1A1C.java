@@ -1,6 +1,7 @@
 package com.ieasy.tests;
 import com.ieasy.base.TestBase;
-import java.util.ArrayList;
+
+import java.util.*;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -40,7 +41,9 @@ private static final Logger log = LogManager.getLogger(Dp2APlan.class);
 		test = ExtentTestManager.getTest();
 	}
 
-	String xlFilePath = "E:\\Selenium\\New IEA\\InsureEasyAutomation\\src\\test\\resources\\InsureEasy_ABHI_Data.xlsx";
+	String root = System.getProperty("user.dir");
+	String filepath = "\\src\\test\\resources\\InsureEasy_ABHI_Data.xlsx"; // in case of Windows: "\\path \\to\\yourfile.txt
+	String xlFilePath = root+filepath;
 	ExcelReader sheet = null;
 
 	public ArrayList<HealthPOJO> testData(String xlFilePath, String sheetName) throws Exception {
@@ -55,7 +58,7 @@ private static final Logger log = LogManager.getLogger(Dp2APlan.class);
 
 		for (int i = 1; i < rows; i++) {
 			HealthPOJO hPojo = new HealthPOJO();
-			System.out.println("Getting first row....");
+			System.out.println("Getting first row...." +i);
 			for (int j = 0; j < columns; j++) {
 				//done ts
 				if (sheet.getCellData(sheetName, j, 0).equalsIgnoreCase("PinCode")) {
@@ -131,9 +134,20 @@ private static final Logger log = LogManager.getLogger(Dp2APlan.class);
 				}
 				
 			}
-			
 			dataList.add(hPojo);
-			
+		}
+		for(int i=0;i<dataList.size();i++) {
+			if(dataList.get(i).getWifeAge().contains("null"))
+				dataList.remove(i).getWifeAge();
+
+			if(dataList.get(i).getSonAge().contains("null"))
+				dataList.remove(i).getSonAge();
+
+			if(dataList.get(i).getSon2Age().contains("null"))
+				dataList.remove(i).getSon2Age();
+
+			if(dataList.get(i).getDaughter2Age().contains("null"))
+				dataList.remove(i).getDaughter2Age();
 
 		}
 		return dataList;

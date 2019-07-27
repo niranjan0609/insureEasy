@@ -40,8 +40,7 @@ public class HealthPOJO {
 	private String sonAge;
 	private String daug2Age;
 	private String son2Age;
-	 
-	
+
 	
 	public void setPinCode(String pinCode) {
 	
@@ -361,32 +360,31 @@ public class HealthPOJO {
 	}
 
 		public String getWifeAge() {
-		
+		if(wifeAge==null)wifeAge="";
 		return wifeAge;
 	}
 
 	public void setWifeAge(String wifeAge) {
-		// TODO Auto-generated method stub
-		this.wifeAge = wifeAge  ;
+		this.wifeAge = wifeAge ;
 
 	}
 
 	public void setDaughterAge(String daugAge) {
-		// TODO Auto-generated method stub
 		this.daugAge = daugAge;
 	}
 	
 	public String getDaughterAge() {
-		return daugAge;
+        if(daugAge==null)daugAge="";
+	    return daugAge;
 	}
 
 	public void setSonAge(String sonAge) {
-		// TODO Auto-generated method stub
 		this.sonAge = sonAge;
 	}
 	
 	public String getSonAge() {
-		return sonAge;
+        if(sonAge==null)sonAge="";
+        return sonAge;
 	}
 
 	public void setDaughter2Age(String daug2Age) {
@@ -395,15 +393,17 @@ public class HealthPOJO {
 	}
 	
 	public String getDaughter2Age() {
-		return daug2Age;
+        if(daug2Age==null)daug2Age="";
+	    return daug2Age;
 	}
 
 	public void setSon2Age(String son2Age) {
-		// TODO Auto-generated method stub
 		this.son2Age = son2Age;
 	}
 	
 	public String getSon2Age() {
-		return son2Age;
+
+        if(son2Age==null)son2Age="";
+        return son2Age;
 	}
 }
