@@ -174,7 +174,7 @@ private static final Logger log = LogManager.getLogger(Dp2APlan.class);
 		healthPage.enterPinCode(part2, false);
 		healthPage.selectFirstPinValue();
 		action.sendKeys(Keys.ESCAPE).perform();
-		Thread.sleep(3000);
+		Thread.sleep(4000);
 		healthPage.enterMobileNo(pojoData.getMobileNumber());
 		healthPage.emailId(pojoData.getEmailId());
 		healthPage.clickNextBtn();
